@@ -21,7 +21,7 @@
 </head>
 
 <body style="--bs-primary:#79b104;--bs-primary-rgb:121,177,4;font-family:Kanit, sans-serif;background:white;">
-    <nav class="navbar navbar-expand-md fixed-top text-white py-3" style="background:rgb(33,37,41);width:100%;">
+    <!-- <nav class="navbar navbar-expand-md fixed-top text-white py-3" style="background:rgb(33,37,41);width:100%;">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span><a href="index.html"><img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png" width="154" height="33"></a></span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-3" class="navbar-toggler text-white" style="border-width:1px;border-color:white;"><span class="visually-hidden">Toggle navigation</span><span class="text-white navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewbox="0 0 24 24" fill="none" style="font-size:30px;"><path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor"></path><path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor"></path><path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor"></path></svg></span></button>
             <div class="collapse navbar-collapse text-white" id="navcol-3" style="font-size:18px;">
                 <ul class="navbar-nav mx-auto">
@@ -41,7 +41,19 @@
                 </ul><button class="btn btn-primary bg-primary border-0 rounded-0" style="font-size:17px;" type="button">Donate</button>
             </div>
         </div>
-    </nav>
+    </nav> -->
+
+    <div id="navbar"></div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+</script>
+
+
     <section style="margin-top:70px;">
         <div data-bss-parallax-bg="true" class="filter: brightness(50%);" style="height:800px;background:url(&quot;assets/img/Code-for-Hood-and-Operation-Innovate-New-Picture-4.jpg&quot;) center / cover;">
             <div class="container h-100">
@@ -61,6 +73,7 @@
             </div>
         </div>
     </section>
+    
     <section>
         <div class="container py-4 py-xl-5">
             <div class="row mb-4 mb-lg-5">
