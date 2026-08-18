@@ -1,0 +1,164 @@
+<!-- =========================
+     HEADER / NAVIGATION
+========================== -->
+<nav class="navbar navbar-expand-md fixed-top py-3 text-white" style="background: rgb(33, 37, 41); width: 100%;">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png" alt="Code 4 Hood logo" style="max-width: 154px; height: auto;">
+        </a>
+
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navcol-3"
+            aria-controls="navcol-3" aria-expanded="false" aria-label="Toggle navigation"
+            style="border-width: 1px; border-color: white;">
+            <span class="navbar-toggler-icon text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="font-size: 30px;">
+                    <path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor"></path>
+                    <path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor"></path>
+                    <path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor"></path>
+                </svg>
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navcol-3" style="font-size: 18px;">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="executive-board.html">Executive Board</a>
+                        <a class="dropdown-item" href="leadership-team.html">Leadership Team</a>
+                        <a class="dropdown-item" href="impact-crew.html">Impact Crew</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="impact-overview.html">Impact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="steam-education.html">STEAM Education</a>
+                        <a class="dropdown-item" href="youth-workforce-career-pathways.html">Youth Workforce &amp; Career Pathways</a>
+                        <a class="dropdown-item" href="entrepreneurship-innovation.html">Entrepreneurship &amp; Innovation</a>
+                        <a class="dropdown-item" href="safe-spaces-for-youth.html">Safe Spaces</a>
+                        <a class="dropdown-item" href="youth-development.html">Youth Development</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="digital-resource-hub.html">Digital Resource Hub</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        Events
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="hack-the-hunt.html">Hack the Hunt</a>
+                        <a class="dropdown-item" href="sactown-youth-popups.html">SacTown Youth PopUps</a>
+                        <a class="dropdown-item" href="hack-the-classroom.html">Hack the Classroom</a>
+                        <a class="dropdown-item" href="crowned-in-confidence.html">Crowned in Confidence</a>
+                        <a class="dropdown-item" href="above-the-stem.html">Above the STEM</a>
+                        <a class="dropdown-item" href="bdog-trivia-night.html">BDOG Trivia Night</a>
+                        <a class="dropdown-item" href="national-day-of-stem.html">National Day of STEM</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <a href="ways-to-donate.html" class="btn btn-primary border-0 rounded-0 donate-btn" style="font-size: 17px; background-color: #79b104; color: white;">
+                Donate
+            </a>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar-nav .nav-link.active {
+        color: #79b104 !important;
+    }
+
+    .dropdown-item.active {
+        color: #79b104 !important;
+        background-color: transparent !important;
+    }
+
+    .donate-btn.active {
+        background-color: #79b104 !important;
+        border-color: #79b104 !important;
+        color: white !important;
+    }
+</style>
+
+<script>
+    function setActiveLink() {
+        // Get the current page filename
+        let currentPage = window.location.pathname.split('/').pop();
+        if (!currentPage || currentPage === '') {
+            currentPage = 'index.html';
+        }
+
+        // Get all nav links (both regular and dropdowns)
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const donateBtn = document.querySelector('.donate-btn');
+
+        // Check regular nav links
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        // Check dropdown items
+        dropdownItems.forEach(item => {
+            const href = item.getAttribute('href');
+            if (href === currentPage) {
+                item.classList.add('active');
+                // Also highlight the parent dropdown toggle
+                const parentDropdown = item.closest('.dropdown');
+                if (parentDropdown) {
+                    const parentToggle = parentDropdown.querySelector('.dropdown-toggle');
+                    if (parentToggle) {
+                        parentToggle.classList.add('active');
+                    }
+                }
+            }
+        });
+
+        // Check donate button
+        if (donateBtn) {
+            const href = donateBtn.getAttribute('href');
+            if (href === currentPage) {
+                donateBtn.classList.add('active');
+            }
+        }
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', setActiveLink);
+
+    // Also run immediately in case DOM is already loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    } else {
+        setActiveLink();
+    }
+</script>
