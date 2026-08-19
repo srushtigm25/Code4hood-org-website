@@ -1,419 +1,1048 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en" data-bss-forced-theme="light" style="font-family:Kanit, sans-serif;">
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>The Team | Code4Hood</title>
-    <meta name="description" content="The Team | Code4Hood">
-    <link rel="icon" type="image/png" sizes="1050x450" href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Youth Development | Code4Hood</title>
+    <meta name="description" content="Youth Development & Empowerment | Code4Hood">
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/css/Lightbox-Gallery-baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
-    <link rel="stylesheet" href="assets/css/css/Projects-Grid-Horizontal-images.css">
-    <link rel="stylesheet" href="assets/css/css/aos.min.css">
-    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
-    <link rel="stylesheet" href="assets/css/Features-Large-Icons-icons.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <style>
 
+        :root {
+            --bs-primary: #79b104;
+        }
+
+        body {
+            font-family: Kanit, sans-serif;
+            background: #ffffff;
+        }
+
+        .youth-card {
+            background: #f8f9fa;
+            border: 1px solid #eaeaea;
+            border-left: 5px solid #79b104;
+            padding: 28px;
+            height: 100%;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .youth-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .youth-card h4 {
+            color: #79b104;
+            font-size: 22px;
+        }
+
+        .youth-card p,
+        .youth-card li {
+            color: #555;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .youth-card ul {
+            padding-left: 20px;
+        }
+
+        .program-column {
+            display: flex;
+        }
+
         .newsletter-section {
-                    background: #79b104;
-                    padding: 20px 15px;
-                    color: white;
-                    border-radius: 0;
-                }
-            
-                .newsletter-section h3 {
-                    font-size: 24px;
-                    font-weight: 700;
-                    margin-bottom: 12px;    
-                }
-            
-                .newsletter-section p {
-                    font-size: 18px;
-                    margin-bottom: 25px;
-                }
-            
-                .newsletter-form .form-control {
-                    min-height: 42px;
-                    border-radius: 0;
-                    border: none;
-                    font-size: 15px;
-                }
-            
-                .newsletter-form .btn {
-                    min-height: 42px;
-                    border-radius: 0;
-                    font-size: 17px;
-                    font-weight: 600;
-                    background: #222;
-                    border: none;
-                }
-            
-                .newsletter-form .btn:hover {
-                    background: #111;
-                }
+            background: #79b104;
+            padding: 20px;
+            color: #fff;
+        }
 
-                .footer-link {
-                    color: #ccc;
-                    text-decoration: none;
-                    transition: 0.3s;
-                }
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-                .footer-link:hover {
-                    color: #79b104;
-                    padding-left: 5px;
-                }
+        .footer-link:hover {
+            color: #79b104;
+            padding-left: 5px;
+        }
 
-                .social-icon {
-                    color: #ccc;
-                    transition: 0.3s;
-                }
+        .social-icon {
+            color: #ccc;
+            transition: 0.3s;
+        }
 
-                .social-icon:hover {
-                    color: #79b104;
-                    transform: scale(1.2);
-                }
+        .social-icon:hover {
+            color: #79b104;
+            transform: scale(1.2);
+        }
 
-                </style>
+        @media (max-width: 767px) {
+            .youth-card {
+                padding: 22px;
+            }
+        }
+
+    </style>
 </head>
 
-<body style="--bs-primary:#79b104;--bs-primary-rgb:121,177,4;font-family:Kanit, sans-serif;background:white;">
 
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <div id="navbar"></div>
 
 <script>
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
-</script>
-
-<script>
     function setActiveLink() {
+
         let currentPage = window.location.pathname.split('/').pop();
-        if (!currentPage || currentPage === '') {
+
+        if (!currentPage) {
             currentPage = 'index.html';
         }
 
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
 
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPage) {
+            if (link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             }
+
         });
 
-        dropdownItems.forEach(item => {
-            const href = item.getAttribute('href');
-            if (href === currentPage) {
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+
+            if (item.getAttribute('href') === currentPage) {
+
                 item.classList.add('active');
+
                 const parentDropdown = item.closest('.dropdown');
+
                 if (parentDropdown) {
-                    const parentToggle = parentDropdown.querySelector('.dropdown-toggle');
-                    if (parentToggle) {
-                        parentToggle.classList.add('active');
+
+                    const toggle =
+                        parentDropdown.querySelector('.dropdown-toggle');
+
+                    if (toggle) {
+                        toggle.classList.add('active');
                     }
+
                 }
             }
+
         });
     }
+
 
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
+
             document.getElementById('navbar').innerHTML = data;
+
             setActiveLink();
+
         });
 </script>
 
-<section style="margin-top:70px;">
-    <!-- <div data-bss-parallax-bg="true" class="filter: brightness(50%);" style="height:800px;background:url(&quot;assets/img/Code-for-Hood-and-Operation-Innovate-New-Picture-4.jpg&quot;) center / cover;">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-md-6 col-lg-7 text-center text-md-start text-white d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                    <div style="max-width:350px;">
-                        <h1 class="text-uppercase fw-bold" style="font-size:50px;">Code 4 Hood</h1>
-                        <p class="my-3" style="font-size:20px;">Youth Development</p>
-                        <form class="d-flex flex-wrap" method="post">
-                            <div class="mb-3"><input class="form-control form-control rounded-0" type="email" name="email" placeholder="Sign Up For Our Newsletter!"></div>
-                            <div class="mb-3"><button class="btn btn-primary bg-primary border-0 ms-2 rounded-0" type="submit">Subscribe </button></div>
-                        </form>
-                        <p class="my-3" style="font-size:20px;">Where innovation, opportunity, and youth leadership come together.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-</section>
 
-<!-- Youth Development & Empowerment Section -->
-<section class="py-5" style="background:#ffffff;">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="fw-bold" style="color:#1f1f1f;">Youth Development &amp; Empowerment</h2>
-            <div style="width:90px;height:4px;background:#79b104;margin:14px auto 20px auto;"></div>
-            <p class="mx-auto mb-0" style="max-width:850px;color:#555;line-height:1.8;">
-                Code 4 Hood’s Youth Development &amp; Empowerment programs help young people build confidence,
-                strengthen leadership skills, support emotional well-being, and prepare for healthy, successful futures.
-            </p>
-        </div>
+<!-- Navbar spacing -->
 
-        <!-- Program Cards -->
-        <div class="row g-4">
-
-            <!-- Own Your Future -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="700">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Own Your Future</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>Own Your Future</strong> is Code 4 Hood’s youth empowerment and prevention program
-                        designed to help young people make informed decisions about their health, choices, and future goals.
-                    </p>
-                    <p class="mb-0" style="color:#555;line-height:1.85;">
-                        Through interactive workshops, mentorship, service-learning, and community projects, youth explore
-                        substance use prevention, harm reduction, leadership development, and personal responsibility while
-                        building the confidence to make healthy choices and take ownership of their future.
-                    </p>
-                </div>
-            </div>
-
-<!-- Futures West Sacramento -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="900">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Futures: West Sacramento</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>Futures: West Sacramento</strong> is a youth development initiative designed to support
-                        young people in building leadership skills, exploring career interests, and strengthening their connection
-                        to their community.
-                    </p>
-                    <p class="mb-0" style="color:#555;line-height:1.85;">
-                        Through mentorship, workshops, and community-based activities, youth gain opportunities to develop life
-                        skills, engage in leadership experiences, connect with local resources, build confidence, and create a
-                        stronger vision for their future.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Mind16 -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="700">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">MIND16 – Mental Health Initiative</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>MIND16</strong> is Code 4 Hood’s youth wellness and mental health initiative focused on helping
-                        young people develop emotional awareness, coping skills, and resilience.
-                    </p>
-                    <p class="mb-0" style="color:#555;line-height:1.85;">
-                        Through workshops, guided discussions, and peer engagement activities, youth learn about stress management,
-                        emotional health, mindfulness, and self-care while developing the tools needed to maintain healthy mental
-                        and emotional well-being in a supportive environment.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Youth Healing Circles -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Youth Healing Circles</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>Youth Healing Circles</strong> provide safe, supportive spaces where young people can explore healing,
-                        build resilience, and connect with others through shared experiences.
-                    </p>
-                    <p style="color:#555;line-height:1.85;">
-                        These circles combine guided discussions, trauma-informed mentorship, and healing through movement to support
-                        youth navigating stress, trauma, relationships, and personal growth.
-                    </p>
-                    <ul class="mb-0 ps-3" style="color:#555;line-height:1.9;">
-                        <li>Movement-based healing such as dance, yoga, and mindfulness</li>
-                        <li>Open dialogue and guided reflection</li>
-                        <li>Peer support and community building</li>
-                        <li>Social-emotional skill development</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Life Coaching for Teens -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="900">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Life Coaching for Teens</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>Trauma-Informed Life Coaching for Teens</strong> is a personalized support service designed to help
-                        young people navigate life’s challenges while building confidence, resilience, and a clear path forward.
-                    </p>
-                    <p style="color:#555;line-height:1.85;">
-                        Through a trauma-informed lens, trained mentors provide a safe, supportive environment where teens feel seen,
-                        heard, and empowered.
-                    </p>
-                    <ul class="mb-0 ps-3" style="color:#555;line-height:1.9;">
-                        <li>Build self-confidence and emotional awareness</li>
-                        <li>Develop healthy coping strategies and decision-making skills</li>
-                        <li>Set personal, academic, and career goals</li>
-                        <li>Strengthen communication and relationships</li>
-                        <li>Navigate school, family, and life transitions</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Youth Wall Street -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="900">
-                <div class="h-100 p-4 rounded-4 shadow-sm youth-card" style="background:#f8f9fa;border:1px solid #eaeaea;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Youth Wall Street</h4>
-                    <p style="color:#555;line-height:1.85;">
-                        <strong>Youth Wall Street</strong> is a cultural, social justice, life, and leadership skill development
-                        program focused on entrepreneurship, life skills, health and wellness, BIPOC history, financial literacy,
-                        communication and relationship skills, and crime and substance abuse prevention. The program helps youth
-                        strengthen their voice, expand their opportunities, and build the knowledge needed to thrive in their
-                        communities and future careers.
-                </div>
-            </div>
-
-            <!-- Love & Logic -->
-            <div class="col-lg-12" data-aos="fade-up" data-aos-duration="850">
-                <div class="p-4 p-md-5 rounded-4 shadow-sm youth-card" style="background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 100%);border:1px solid #eaeaea;border-left:5px solid #79b104;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Love & Logic: Building Healthy Relationships</h4>
-                    <p style="color:#555;line-height:1.9;">
-                        Love & Logic is a dynamic, youth-centered program designed to help young people build healthy relationships, strengthen decision-making skills, and develop emotional awareness. Rooted in the evidence-based Love Notes curriculum, this program creates a safe and engaging space for youth to explore real-life topics such as communication, boundaries, self-respect, peer pressure, and making informed choices.
-                    </p>
-                    <p style="color:#555;line-height:1.9;">
-                        Through interactive discussions, role-playing scenarios, and guided activities, participants learn how to recognize healthy vs. unhealthy relationships, manage emotions, and think critically about the impact of their decisions. The program also emphasizes goal setting, personal responsibility, and understanding how today's choices shape future opportunities.
-                    </p>
-                    <p class="mb-0" style="color:#555;line-height:1.9;">
-                        Love & Logic goes beyond conversation—it equips youth with practical tools they can apply in their everyday lives, empowering them to build stronger relationships with peers, family, and themselves.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Crowned in Confidence Sr. -->
-            <div class="col-lg-12" data-aos="fade-up" data-aos-duration="850">
-                <div class="p-4 p-md-5 rounded-4 shadow-sm youth-card" style="background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 100%);border:1px solid #eaeaea;border-left:5px solid #79b104;">
-                    <h4 class="fw-bold mb-3" style="color:#79b104;">Crowned in Confidence Sr.</h4>
-                    <p style="color:#555;line-height:1.9;">
-                        Crowned in Confidence Sr. is an advanced empowerment and leadership development program designed for older youth ready to step into their voice, purpose, and power. This program creates space for deeper conversations around identity, self-worth, leadership, and navigating real-world challenges with confidence and clarity.
-                    </p>
-                    <p style="color:#555;line-height:1.9;">
-                        Participants engage in workshops, group discussions, and personal development activities that focus on goal setting, decision-making, communication, and leadership presence. Youth are challenged to think critically, build resilience, and develop the confidence to advocate for themselves and others.
-                    </p>
-                    <p class="mb-0" style="color:#555;line-height:1.9;">
-                        Crowned in Confidence Sr. is about more than confidence—it's about ownership. Ownership of your story, your voice, and your future. Participants leave equipped with the mindset, tools, and leadership skills to show up boldly in school, in their communities, and in life.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    .youth-card {
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .youth-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
-    }
-</style>
+<div style="height:70px;"></div>
 
 
 <!-- =========================
-     NEWSLETTER SECTION
-========================== -->
-<section style="padding:0 0 80px 0;background:#ffffff;">
+     YOUTH DEVELOPMENT
+========================= -->
+
+<section class="py-5" style="background:#ffffff;">
+
     <div class="container">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="text-center mb-5"
+             data-aos="fade-up"
+             data-aos-duration="800">
+
+            <h2 class="fw-bold"
+                style="color:#1f1f1f;">
+
+                Youth Development &amp; Empowerment
+
+            </h2>
+
+            <div style="
+                width:90px;
+                height:4px;
+                background:#79b104;
+                margin:14px auto 20px auto;">
+            </div>
+
+            <p class="mx-auto mb-0"
+               style="
+                    max-width:850px;
+                    color:#555;
+                    line-height:1.8;">
+
+                Code 4 Hood’s Youth Development &amp; Empowerment programs
+                help young people build confidence, strengthen leadership
+                skills, support emotional well-being, and prepare for healthy,
+                successful futures.
+
+            </p>
+
+        </div>
+
+
+        <!--
+            12 PROGRAM CARDS
+
+            Desktop: 3 columns x 4 rows
+            Tablet: 2 columns
+            Mobile: 1 column
+        -->
+
+        <div class="row g-4 align-items-stretch">
+
+
+            <!-- 1. OWN YOUR FUTURE -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Own Your Future
+                    </h4>
+
+                    <p>
+                        <strong>Own Your Future</strong> is Code 4 Hood’s youth
+                        empowerment and prevention program designed to help
+                        young people make informed decisions about their
+                        health, choices, and future goals.
+                    </p>
+
+                    <p class="mb-0">
+                        Through interactive workshops, mentorship,
+                        service-learning, and community projects, youth
+                        explore substance use prevention, harm reduction,
+                        leadership development, and personal responsibility
+                        while building the confidence to make healthy choices
+                        and take ownership of their future.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2. FUTURES WEST SACRAMENTO -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Futures: West Sacramento
+                    </h4>
+
+                    <p>
+                        <strong>Futures: West Sacramento</strong> is a youth
+                        development initiative designed to support young
+                        people in building leadership skills, exploring
+                        career interests, and strengthening their connection
+                        to their community.
+                    </p>
+
+                    <p class="mb-0">
+                        Through mentorship, workshops, and community-based
+                        activities, youth gain opportunities to develop life
+                        skills, engage in leadership experiences, connect
+                        with local resources, build confidence, and create a
+                        stronger vision for their future.
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- 3. CROWNED IN CONFIDENCE JR -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Crowned in Confidence Jr.
+                    </h4>
+
+                    <p>
+                        Crowned in Confidence Jr. is an empowerment and
+                        confidence-building program designed for younger youth
+                        to explore identity, self-worth, and personal growth
+                        in a supportive, nurturing environment.
+                    </p>
+
+                    <p class="mb-0">
+                        Through workshops, group discussions, creative
+                        activities, and peer engagement, youth develop
+                        self-confidence, strengthen communication skills,
+                        build healthy relationships, and discover their unique
+                        strengths. The program creates a safe space for young
+                        people to express themselves, connect with peers, and
+                        begin building the confidence and resilience they'll
+                        carry throughout their lives.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 4. CROWNED IN CONFIDENCE SR -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Crowned in Confidence Sr.
+                    </h4>
+
+                    <p>
+                        Crowned in Confidence Sr. is an advanced empowerment
+                        and leadership development program designed for older
+                        youth ready to step into their voice, purpose, and
+                        power.
+                    </p>
+
+                    <p>
+                        This program creates space for deeper conversations
+                        around identity, self-worth, leadership, and
+                        navigating real-world challenges with confidence and
+                        clarity.
+                    </p>
+
+                    <p>
+                        Participants engage in workshops, group discussions,
+                        and personal development activities that focus on goal
+                        setting, decision-making, communication, and
+                        leadership presence. Youth are challenged to think
+                        critically, build resilience, and develop the
+                        confidence to advocate for themselves and others.
+                    </p>
+
+                    <p class="mb-0">
+                        Crowned in Confidence Sr. is about more than
+                        confidence. It is about ownership of your story, your
+                        voice, and your future. Participants leave equipped
+                        with the mindset, tools, and leadership skills to show
+                        up boldly in school, in their communities, and in
+                        life.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 5. LEVEL UP & THRIVE -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        Level Up &amp; Thrive
+                    </h4>
+
+                    <p>
+                        <strong>Youth Wellness &amp; Resilience</strong>
+                    </p>
+
+                    <p>
+                        <strong>Level Up &amp; Thrive</strong> is our youth
+                        wellness initiative designed to help young people
+                        strengthen their emotional awareness, coping skills,
+                        resilience, and overall well-being.
+                    </p>
+
+                    <p>
+                        Through interactive workshops, guided discussions,
+                        peer engagement, and wellness activities, youth
+                        explore topics such as stress management, emotional
+                        wellness, mindfulness, self-care, healthy coping
+                        strategies, and building resilience.
+                    </p>
+
+                    <p>
+                        The program also incorporates
+                        <strong>Youth Healing Circles</strong>, creating space
+                        for young people to connect, reflect, share
+                        experiences, and build community in a supportive
+                        environment.
+                    </p>
+
+                    <p>
+                        Through <strong>Wellness Through Movement</strong>,
+                        youth explore the connection between physical and
+                        emotional well-being through activities such as
+                        dance, yoga, stretching, and intentional movement.
+                    </p>
+
+                    <p class="mb-0">
+                        Level Up &amp; Thrive gives young people multiple ways
+                        to connect, express themselves, develop healthy coping
+                        tools, and build the skills they need to navigate
+                        life's challenges and thrive.
+                    </p>
+
+                </div>
+
+            </div>
+        
+            <!-- 5. ADULTING 101 -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        Adulting 101
+                    </h4>
+
+                    <p>
+                        <strong>
+                            Real-Life Skills for Life After High School
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>Adulting 101</strong> helps young people learn
+                        the practical, everyday life skills they don't always
+                        get taught in school but definitely need for
+                        adulthood.
+                    </p>
+
+                    <p>
+                        Through hands-on workshops and real-world activities,
+                        youth learn how to navigate responsibilities such as
+                        banking, budgeting and financial literacy, grocery
+                        shopping, cooking, basic car care, changing a tire,
+                        managing bills, understanding credit, household
+                        basics, and making smart financial and everyday
+                        decisions.
+                    </p>
+
+                    <p>
+                        The program also introduces skills related to
+                        independent living, personal responsibility, time
+                        management, communication, problem-solving, and
+                        navigating everyday adult situations.
+                    </p>
+
+                    <p class="mb-0">
+                        From opening a bank account to planning a grocery
+                        budget or learning what to do when you get a flat
+                        tire, Adulting 101 is about building the confidence
+                        and practical know-how young people need to take care
+                        of themselves and successfully navigate life after
+                        high school.
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- 4. MY FUTURE PLANS -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        My Future Plans
+                    </h4>
+
+                    <p>
+                        <strong>
+                            College, Career &amp; Life Readiness Coaching
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>My Future Plans</strong> is a personalized,
+                        one-on-one coaching program that helps young people
+                        build confidence, set meaningful goals, and create a
+                        clear plan for life after high school.
+                    </p>
+
+                    <p>
+                        Working individually with a supportive coach, youth
+                        develop a personalized plan focused on their academic
+                        progress, college or career goals, personal
+                        development, and overall readiness for adulthood.
+                    </p>
+
+                    <p class="mb-2">
+                        Youth receive support to:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Set personal, academic, college, and career goals
+                        </li>
+
+                        <li>
+                            Create a plan for high school completion and life
+                            after graduation
+                        </li>
+
+                        <li>
+                            Explore college, training, employment, and career
+                            pathways
+                        </li>
+
+                        <li>
+                            Strengthen decision-making, communication, and
+                            self-advocacy skills
+                        </li>
+
+                        <li>
+                            Build confidence, emotional awareness, and healthy
+                            life skills
+                        </li>
+
+                        <li>
+                            Navigate school, family, relationships, and life
+                            transitions
+                        </li>
+
+                        <li>
+                            Identify actionable next steps and stay
+                            accountable to their goals
+                        </li>
+                    </ul>
+
+                    <p class="mb-0">
+                        Whether a young person is planning for college, career
+                        training, employment, entrepreneurship, or still
+                        figuring out what's next, My Future Plans gives them a
+                        trusted coach and structured support to turn their
+                        ideas for the future into a plan they can begin
+                        working toward today.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. LOVE & LOGIC -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        Love &amp; Logic
+                    </h4>
+
+                    <p>
+                        <strong>Healthy Relationships Program</strong>
+                    </p>
+
+                    <p>
+                        <strong>Love &amp; Logic</strong> is our healthy
+                        relationships program designed to help young people
+                        build stronger relationships, make informed
+                        decisions, and develop the skills needed to navigate
+                        relationships with confidence and self-awareness.
+                    </p>
+
+                    <p>
+                        Using the evidence-based
+                        <strong>Love Notes curriculum</strong>, youth explore
+                        real-life topics including healthy and unhealthy
+                        relationships, communication, boundaries,
+                        self-respect, peer pressure, emotional awareness,
+                        decision-making, and personal responsibility.
+                    </p>
+
+                    <p>
+                        Through interactive discussions, role-playing, and
+                        guided activities, participants learn to recognize
+                        healthy relationship behaviors, communicate
+                        effectively, establish personal boundaries, manage
+                        emotions, and understand how the choices they make
+                        today can impact their future.
+                    </p>
+
+                    <p>
+                        The program also encourages goal setting and future
+                        planning, helping youth think about how relationships
+                        connect to their personal, academic, and career goals.
+                    </p>
+
+                    <p class="mb-0">
+                        Love &amp; Logic gives young people practical tools to
+                        build healthy relationships with themselves, their
+                        peers, families, and future partners while making
+                        choices that support the life they want to create.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7. YOUTH WALL STREET -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        Youth Wall Street
+                    </h4>
+
+                    <p>
+                        <strong>
+                            Financial Empowerment, Social Justice &amp;
+                            Leadership
+                        </strong>
+                    </p>
+
+                    <p>
+                        Youth Wall Street is a culturally responsive youth
+                        development program that helps young people build the
+                        knowledge, confidence, and life skills needed to
+                        navigate money, relationships, systems, and their
+                        communities.
+                    </p>
+
+                    <p>
+                        Through interactive workshops and real-world
+                        discussions, youth explore
+                        <strong>
+                            financial literacy, entrepreneurship, social
+                            justice, civic engagement, cultural history,
+                            leadership, communication, healthy relationships,
+                            and crime and substance-use prevention
+                        </strong>.
+                    </p>
+
+                    <p>
+                        Participants learn practical financial skills such as
+                        <strong>
+                            budgeting, saving, banking, understanding credit,
+                            and making informed financial decisions
+                        </strong>,
+                        while also engaging in conversations about their
+                        rights, interacting with law enforcement, navigating
+                        community systems, advocacy, and issues that impact
+                        young people and their communities.
+                    </p>
+
+                    <p class="mb-0">
+                        Youth Wall Street encourages young people to
+                        <strong>
+                            know their worth, understand their voice, make
+                            informed decisions, and develop the financial and
+                            leadership skills to create opportunities for
+                            themselves and their communities.
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 9. IMPACT CREW -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        IMPACT Crew
+                    </h4>
+
+                    <p>
+                        <strong>
+                            Inspiring Minds, Purpose, Action, Community &amp;
+                            Teamwork
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>Youth Leadership &amp; Work Experience</strong>
+                    </p>
+
+                    <p>
+                        <strong>IMPACT Crew</strong> is a paid youth
+                        leadership and work experience program for a cohort of
+                        <strong>12 young people ages 12–19</strong> who are
+                        ready to build their leadership skills, gain
+                        real-world experience, and make an impact in their
+                        community.
+                    </p>
+
+                    <p>
+                        Throughout the program, youth participate in
+                        leadership development, job readiness, communication,
+                        teamwork, event planning, and personal development
+                        workshops. Activities such as StrengthsFinder and True
+                        Colors help participants better understand their
+                        individual strengths, leadership styles, and how they
+                        work effectively with others.
+                    </p>
+
+                    <p>
+                        IMPACT Crew members put their skills into action by
+                        helping to plan, develop, and host SacTown Youth X
+                        events and experiences. Through this hands-on work,
+                        youth gain practical experience in event planning,
+                        outreach, decision-making, problem-solving, community
+                        engagement, and working as part of a team.
+                    </p>
+
+                    <p>
+                        Youth receive a stipend for their participation while
+                        gaining valuable leadership and work experience they
+                        can carry into school, employment, and future
+                        opportunities.
+                    </p>
+
+                    <p class="mb-0">
+                        Each funded program cycle welcomes a new cohort of
+                        young leaders, giving more youth the opportunity to
+                        discover their strengths, find their voice, build
+                        their skills, and make an IMPACT.
+                    </p>
+
+                </div>
+
+            </div>
+
+            
+            <!-- 8. NEXT MOVE -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-2">
+                        Next Move
+                    </h4>
+
+                    <p>
+                        <strong>
+                            Violence Prevention &amp; Intervention
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>Next Move</strong> is a community-based
+                        violence prevention and intervention program designed
+                        to connect youth with support, mentorship, and
+                        positive opportunities during critical moments in
+                        their lives.
+                    </p>
+
+                    <p>
+                        Through partnerships with probation, law enforcement,
+                        schools, community organizations, and other
+                        youth-serving systems, the program works to identify
+                        and engage young people who may be at increased risk
+                        of violence, justice-system involvement, or other
+                        circumstances that can impact their safety and future.
+                    </p>
+
+                    <p>
+                        Using a youth-centered, harm-reduction approach,
+                        participants are connected to trusted mentors,
+                        positive peer experiences, workshops, leadership
+                        development, life skills, and structured activities
+                        that provide alternatives to violence and strengthen
+                        their connection to their community.
+                    </p>
+
+                    <p>
+                        The program also serves as a bridge to longer-term
+                        support. Youth can be connected to Code 4 Hood's
+                        broader ecosystem of Safe Spaces stabilization and
+                        navigation services, workforce and career pathways,
+                        STEM programs, wellness initiatives, and youth
+                        development opportunities, as well as additional
+                        community resources when needed.
+                    </p>
+
+                    <p class="mb-0">
+                        Through initiatives such as Sac Town Youth Pop-Ups,
+                        West Sac Community Futures, and targeted intervention
+                        programming, Next Move creates opportunities to reach
+                        young people where they are, build trusted
+                        relationships, and help them move toward greater
+                        safety, stability, connection, and opportunity.
+                    </p>
+
+                </div>
+
+            </div>
+            
+
+
+
+
+            <!-- 12. TBD -->
+
+            <div class="col-12 col-md-6 col-lg-4 program-column"
+                 data-aos="fade-up">
+
+                <div class="youth-card rounded-4 shadow-sm w-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Coming Soon
+                    </h4>
+
+                    <p class="mb-0"
+                       style="color:#999;">
+
+                        New program content coming soon.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section style="padding:40px 0 80px;background:#ffffff;">
+
+    <div class="container">
+
         <div class="row justify-content-center">
-            <div class="col-lg-10 fade-up-section">
+
+            <div class="col-lg-10">
+
                 <div class="newsletter-section text-center">
 
-                    <div style="position:relative; width:100%; min-height:300px; margin-top:20px; overflow:hidden;">
+                    <div style="
+                        position:relative;
+                        width:100%;
+                        min-height:300px;
+                        margin-top:20px;
+                        overflow:hidden;">
+
                         <iframe
                             title="Signup form powered by Zeffy"
-                            style="position:absolute; border:0; top:0; left:0; right:0; bottom:0; width:100%; height:100%;"
+                            style="
+                                position:absolute;
+                                border:0;
+                                top:0;
+                                left:0;
+                                width:100%;
+                                height:100%;"
                             src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-3240"
                             allowTransparency="true">
                         </iframe>
+
                     </div>
 
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 
 <!-- =========================
      FOOTER
-========================== -->
+========================= -->
+
 <footer class="bg-dark text-white pt-5 pb-4">
+
     <div class="container">
+
         <div class="row gy-4">
 
-            <!-- LOGO + ABOUT -->
+
             <div class="col-md-4">
-                <img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png"
-                     alt="Code4Hood logo"
-                     style="max-width:180px;"
-                     class="mb-3">
-                <p style="font-size:14px; line-height:1.7; color:#ccc;">
-                    Sacramento’s only comprehensive S.T.E.A.M.E.D. youth workforce development program,
-                    empowering youth through technology, creativity, and opportunity.
+
+                <img
+                    src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png"
+                    alt="Code4Hood logo"
+                    style="max-width:180px;"
+                    class="mb-3">
+
+                <p style="
+                    font-size:14px;
+                    line-height:1.7;
+                    color:#ccc;">
+
+                    Sacramento’s only comprehensive S.T.E.A.M.E.D. youth
+                    workforce development program, empowering youth through
+                    technology, creativity, and opportunity.
+
                 </p>
+
             </div>
 
-            <!-- QUICK LINKS -->
+
             <div class="col-md-4">
-                <h6 class="fw-bold mb-3" style="color:#79b104;">Quick Links</h6>
-                <ul class="list-unstyled" style="line-height:2;">
-                    <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    <li><a href="ways-to-donate.html" class="footer-link">Donate</a></li>
+
+                <h6 class="fw-bold mb-3"
+                    style="color:#79b104;">
+
+                    Quick Links
+
+                </h6>
+
+                <ul class="list-unstyled"
+                    style="line-height:2;">
+
+                    <li>
+                        <a href="contact.html"
+                           class="footer-link">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ways-to-donate.html"
+                           class="footer-link">
+                            Donate
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
 
-            <!-- SOCIAL -->
+
             <div class="col-md-4">
-                <h6 class="fw-bold mb-3" style="color:#79b104;">Connect With Us</h6>
+
+                <h6 class="fw-bold mb-3"
+                    style="color:#79b104;">
+
+                    Connect With Us
+
+                </h6>
 
                 <div class="d-flex gap-3 fs-5">
-                    <a href="https://www.facebook.com/code4hood" target="_blank" class="social-icon">
+
+                    <a href="https://www.facebook.com/code4hood"
+                       target="_blank"
+                       class="social-icon">
+
                         <i class="bi bi-facebook"></i>
+
                     </a>
-                    <a href="https://www.instagram.com/code4hood/" target="_blank" class="social-icon">
+
+                    <a href="https://www.instagram.com/code4hood/"
+                       target="_blank"
+                       class="social-icon">
+
                         <i class="bi bi-instagram"></i>
+
                     </a>
-                    <a href="https://www.tiktok.com/@code4hood" target="_blank" class="social-icon">
+
+                    <a href="https://www.tiktok.com/@code4hood"
+                       target="_blank"
+                       class="social-icon">
+
                         <i class="bi bi-tiktok"></i>
+
                     </a>
+
                 </div>
 
-                <p class="mt-3" style="font-size:14px; color:#ccc;">
-                    Stay connected and follow our journey as we empower the next generation.
+                <p class="mt-3"
+                   style="font-size:14px;color:#ccc;">
+
+                    Stay connected and follow our journey as we empower the
+                    next generation.
+
                 </p>
+
             </div>
+
         </div>
+
 
         <hr class="border-secondary mt-4">
 
-        <div class="text-center" style="font-size:13px; color:#aaa;">
-            Built with ❤️ for community impact
-        </div>
-    </div>
-</footer>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/bs-init.js"></script>
-<script src="assets/js/js/bs-init.js"></script>
-<script src="assets/js/js/Lightbox-Gallery-baguetteBox.min.js"></script>
-<script src="assets/js/js/Lightbox-Gallery.js"></script>
-<script src="assets/js/js/aos.min.js"></script>
-</body>
 
+        <div class="text-center"
+             style="font-size:13px;color:#aaa;">
+
+            Built with ❤️ for community impact
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.min.js"></script>
+
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
+
+
+</body>
 </html>
