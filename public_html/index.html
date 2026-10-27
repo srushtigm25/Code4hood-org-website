@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <!-- =========================
+         BASIC PAGE SETUP
+    ========================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home | Code4Hood</title>
+    <meta name="description" content="Home | Code4Hood">
+
+    <!-- =========================
+         FAVICON
+    ========================== -->
+    <link rel="icon" type="image/png" sizes="1050x450"
+        href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+13px&display=swap">
+
+    <!-- =========================
+         CORE CSS
+    ========================== -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+
+    <!-- =========================
+         COMPONENT CSS
+    ========================== -->
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Features-Large-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Projects-Grid-Horizontal-images.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <!-- =========================
+         PAGE STYLES
+    ========================== -->
+    <style>
+        :root {
+            --bs-primary: #79b104;
+            --bs-primary-rgb: 121, 177, 4;
+            --site-dark: #212529;
+            --site-light-gray: #f8f9fa;
+            --site-muted: #ccc;
+        }
+
+        body {
+            font-family: Kanit, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .navbar-brand img {
+            max-width: 154px;
+            height: auto;
+        }
+
+        .hero-section {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .hero-banner {
+            min-height: 800px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("assets/img/Code-for-Hood-and-Operation-Innovate-New-Picture-4.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .section-dark {
+            background: var(--site-dark);
+        }
+
+        .site-card {
+            border: 0;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .approach-box {
+            background: var(--site-light-gray);
+            border-radius: 12px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .footer-link {
+            color: var(--site-muted);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #79b104;
+            padding-left: 5px;
+        }
+
+        .social-icon {
+            color: var(--site-muted);
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            color: #79b104;
+            transform: scale(1.2);
+        }
+
+        .footer-logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        [data-aos] {
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+
+    <div id="navbar-placeholder"></div>
+    
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <main>
+    <section class="hero-section">
+        <div class="hero-banner d-flex align-items-center">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-6 text-center text-md-start text-white d-flex justify-content-center align-items-center justify-content-md-start"
+                        data-aos="fade-right" data-aos-duration="1200">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Code 4 Hood</h1>
+
+                            <p class="hero-text my-3">
+                                Code 4 Hood is a 501(c)(3) youth-serving organization dedicated to empowering young people
+                                and strengthening communities through education, innovation, workforce development, youth
+                                development, and supportive services.
+                            </p>
+                            <p class="hero-text my-3">
+                                We are home to Sacramento’s premier comprehensive S.T.E.A.M.E.D. approach integrating Science,
+                                Technology, Engineering, Art, Math, Entrepreneurship, and Design Thinking with hands-on learning,
+                                career pathways, leadership development, and real-world experiences that prepare young people to
+                                thrive in school, work, and life.
+                            </p>
+
+                            <!-- Newsletter Form -->
+                            <form class="d-flex flex-wrap gap-2 mb-3" onsubmit="handleNewsletterSubmit(event)">
+                                <input class="form-control rounded-0" type="email" id="newsletter-email" name="email"
+                                    placeholder="Sign Up For Our Newsletter!" style="max-width: 320px;" required>
+                                <button class="btn btn-primary bg-primary border-0 rounded-0" type="submit">
+                                    Stay Connected
+                                </button>
+                            </form>
+                            <script>
+                                function handleNewsletterSubmit(event) {
+                                    event.preventDefault();
+                                    const email = document.getElementById('newsletter-email').value;
+                                    if (email) {
+                                        window.location.href = `contact.html?email=${encodeURIComponent(email)}`;
+                                    }
+                                }
+                            </script>
+
+                            <!-- <p class="hero-text my-3">
+                                Where innovation, opportunity, and youth leadership come together.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- =========================
+     WHAT WE DO SECTION
+========================== -->
+
+<section class="section-dark py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 text-white align-items-center g-4">
+
+            <!-- What We Do Image -->
+            <div class="col"
+                 data-aos="fade-right"
+                 data-aos-duration="1200">
+
+                <img class="rounded w-100 h-100 fit-cover"
+                     src="assets/img/pexels-photo-7743257.jpeg"
+                     alt="Teens engaged in robotics teamwork in a modern classroom setting."
+                     style="min-height: 300px; object-fit: cover;">
+
+            </div>
+
+            <!-- What We Do Content -->
+            <div class="col"
+                 data-aos="fade-left"
+                 data-aos-duration="1200">
+
+                <div class="text-start">
+
+                    <!-- Existing Icon -->
+                    <div class="d-flex justify-content-center align-items-center bs-icon-md bs-icon-rounded bs-icon-primary d-inline-block mb-3 bs-icon">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="1em"
+                             height="1em"
+                             fill="currentColor"
+                             viewBox="0 0 16 16"
+                             class="bi bi-bell">
+
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <!-- Section Heading -->
+                    <h4>About Code 4 Hood Edu</h4>
+
+                    <!-- Introduction -->
+                    <p>
+                        Code 4 Hood Edu is a youth-serving 501(c)(3)
+                        nonprofit that helps young people discover their
+                        potential and build pathways to meaningful careers.
+                        Through five core programs
+                        (STEAM Education &amp; Innovation,
+                        Youth Development &amp; Mentoring,
+                        Workforce &amp; Career Pathways,
+                        Safe Spaces, and Prevention &amp; Intervention),
+                        we guide youth through one connected pathway
+                        from Enrichment to Engagement, Education,
+                        and Employment.
+                    </p>
+
+                    <!-- Organization Background -->
+                    <p>
+                        Founded in 2015 and rebranded in 2024,
+                        Code 4 Hood serves youth ages 10 to 24,
+                        with priority enrollment for underserved
+                        and opportunity youth, including young people
+                        who are at risk, system-involved, aging out
+                        of foster care, or re-entering their communities.
+                    </p>
+
+                    <!-- Service Areas -->
+                    <p>
+                        We welcome all youth from the City of Sacramento,
+                        Sacramento County, Yolo County, and San Joaquin County,
+                        with priority for youth who live or attend school
+                        in the following communities:
+                    </p>
+
+                    <!-- Priority Communities -->
+                    <ul>
+                        <li>
+                            <strong>Council District 4:</strong>
+                            Marina Vista
+                        </li>
+
+                        <li>
+                            <strong>Council District 5:</strong>
+                            Oak Park and Tahoe Park
+                        </li>
+
+                        <li>
+                            <strong>Council District 6:</strong>
+                            South Sacramento and the Avondale neighborhood
+                        </li>
+
+                        <li>
+                            <strong>Council District 8:</strong>
+                            Meadowview
+                        </li>
+                    </ul>
+
+                    <!-- Youth Development Impact -->
+                    <p>
+                        Through hands-on learning, mentorship,
+                        wraparound support, and community-based experiences,
+                        we help youth build technical skills,
+                        leadership abilities, and real-world career pathways,
+                        while strengthening the digital literacy
+                        and life skills they need for long-term success.
+                    </p>
+
+                    <!-- Office Locations -->
+                    <p class="mb-0">
+                        Code 4 Hood's primary offices are located
+                        in South Oak Park within the HUD Sacramento
+                        Promise Zone at 4625 44th Street,
+                        Suites 9 and 15, Sacramento, CA 95820.
+                        Our South Sacramento location,
+                        the Code 4 Hood Youth, Family &amp; Community
+                        Collective (YFCC), is located at
+                        7851 35th Avenue, Sacramento, CA 95824.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+   
+<!-- =========================
+     OUR PROGRAMS SECTION
+     Replaces the old Program Pillars section
+========================== -->
+
+<section class="py-5" id="our-programs">
+
+    <style>
+        /* Our Programs page-specific styles */
+
+        #our-programs {
+            --program-green: #79b104;
+            --program-navy: #071943;
+            --program-muted: #5d6673;
+        }
+
+        #our-programs .program-intro {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        #our-programs .program-section-title {
+            color: var(--program-navy);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        #our-programs .pathway-image {
+            display: block;
+            width: 100%;
+            max-width: 1050px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 14px;
+        }
+
+        #our-programs .pathway-stage {
+            border: 1px solid #e8edf1;
+            border-top: 4px solid var(--stage-color);
+            border-radius: 12px;
+            background: #fff;
+            padding: 24px;
+            height: 100%;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #our-programs .pathway-stage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+        }
+
+        #our-programs .stage-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 30px;
+            background: var(--stage-background);
+            color: var(--stage-text);
+            margin-bottom: 14px;
+        }
+
+        #our-programs .pathway-stage h4 {
+            color: var(--program-navy);
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        #our-programs .pathway-stage p {
+            font-size: 15px;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        #our-programs .core-program-card {
+            border: 1px solid #e9edf0;
+            border-radius: 14px;
+            padding: 28px;
+            background: #fff;
+            height: 100%;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #our-programs .core-program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        #our-programs .core-program-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 18px;
+            background: #edf6e2;
+            color: #628f03;
+        }
+
+        #our-programs .core-program-card h4 {
+            color: var(--program-green);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        #our-programs .core-program-card p {
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        #our-programs .why-it-works {
+            background: #f2f8eb;
+            border-left: 5px solid var(--program-green);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        #our-programs .why-it-works p {
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        #our-programs .approach-box {
+            background: #f8faf7;
+            border: 1px solid #e4ecd9;
+            border-radius: 14px;
+        }
+
+        #our-programs .approach-box p,
+        #our-programs .approach-box li {
+            line-height: 1.8;
+        }
+
+        #our-programs .approach-step {
+            margin-bottom: 12px;
+        }
+
+        #our-programs .approach-step strong {
+            color: #628f03;
+        }
+
+        #our-programs .approach-benefits li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 767px) {
+            #our-programs .pathway-stage,
+            #our-programs .core-program-card {
+                padding: 20px;
+            }
+
+            #our-programs .why-it-works {
+                padding: 22px;
+            }
+
+            #our-programs .program-section-title {
+                font-size: 26px;
+            }
+
+            #our-programs .pathway-image {
+                border-radius: 8px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #our-programs .pathway-stage,
+            #our-programs .core-program-card {
+                transition: none;
+            }
+
+            #our-programs .pathway-stage:hover,
+            #our-programs .core-program-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+
+    <div class="container">
+
+        <!-- =========================
+             OUR PROGRAMS INTRODUCTION
+        ========================== -->
+
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center"
+                 data-aos="fade-up"
+                 data-aos-duration="1000">
+
+                <h2 class="mb-3">
+                    <span style="text-decoration: underline;">
+                        Our Programs
+                    </span>
+                </h2>
+
+                <p class="lead program-intro">
+                    Code 4 Hood serves young people ages 10 to 24
+                    through one connected pathway. Youth enter through
+                    hands-on enrichment, grow through deeper engagement
+                    in middle school, and move into education and
+                    employment opportunities in high school and beyond.
+                    Five core programs carry them through every stage.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- =========================
+             CODE 4 HOOD PATHWAY
+        ========================== -->
+
+        <div class="row mb-4">
+            <div class="col-lg-10 mx-auto text-center"
+                 data-aos="fade-up"
+                 data-aos-duration="1000">
+
+                <h3 class="program-section-title">
+                    The Code 4 Hood Pathway
+                </h3>
+
+                <p class="text-muted">
+                    One connected pathway from Enrichment
+                    to Engagement, Education, and Employment.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PATHWAY INFOGRAPHIC -->
+
+        <div class="row mb-5">
+            <div class="col-lg-11 mx-auto"
+                 data-aos="zoom-in"
+                 data-aos-duration="1000">
+
+                <!--
+                    IMAGE REFERENCE
+
+                    Upload the provided infographic to:
+
+                    assets/img/code4hood-pathway.png
+
+                    If using another filename, update src below.
+                -->
+
+                <img
+                    src="assets/img/Code 4 Hood Pathway Infographic.png"
+                    class="pathway-image"
+                    alt="Code 4 Hood connected pathway for ages 10 to 24: Enrichment, Engagement, Education, and Employment, supported by five core programs."
+                    loading="lazy">
+
+            </div>
+        </div>
+
+        <!-- =========================
+             FOUR PATHWAY STAGES
+        ========================== -->
+
+        <div class="row g-4 mb-5">
+
+            <!-- ENRICHMENT -->
+
+            <div class="col-md-6 col-lg-3"
+                 data-aos="fade-up"
+                 data-aos-delay="100"
+                 data-aos-duration="1000">
+
+                <div class="pathway-stage"
+                     style="
+                        --stage-color:#ff8618;
+                        --stage-background:#fff1e2;
+                        --stage-text:#a74c00;
+                     ">
+
+                    <span class="stage-label">
+                        Ages 10+
+                    </span>
+
+                    <h4>Enrichment</h4>
+
+                    <p>
+                        Youth start with fun, hands-on experiences
+                        that spark curiosity: robotics, coding,
+                        3D design, digital art, and maker projects.
+                        The goal is simple: help young people
+                        discover what they love and what
+                        they're capable of.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- ENGAGEMENT -->
+
+            <div class="col-md-6 col-lg-3"
+                 data-aos="fade-up"
+                 data-aos-delay="200"
+                 data-aos-duration="1000">
+
+                <div class="pathway-stage"
+                     style="
+                        --stage-color:#9445ff;
+                        --stage-background:#f3eaff;
+                        --stage-text:#7130bb;
+                     ">
+
+                    <span class="stage-label">
+                        Middle School
+                    </span>
+
+                    <h4>Engagement</h4>
+
+                    <p>
+                        As youth return and grow with us,
+                        programming gets deeper and more structured.
+                        Students join robotics teams and STEAM
+                        competitions, work in hands-on labs,
+                        and build relationships with mentors
+                        who help them develop confidence,
+                        leadership, and healthy decision-making.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+
+            <div class="col-md-6 col-lg-3"
+                 data-aos="fade-up"
+                 data-aos-delay="300"
+                 data-aos-duration="1000">
+
+                <div class="pathway-stage"
+                     style="
+                        --stage-color:#2583ff;
+                        --stage-background:#e8f2ff;
+                        --stage-text:#155ab1;
+                     ">
+
+                    <span class="stage-label">
+                        High School
+                    </span>
+
+                    <h4>Education</h4>
+
+                    <p>
+                        Teens explore careers, build job readiness
+                        skills, and connect their interests to real
+                        pathways in technology, trades, green energy,
+                        the creative industries, and entrepreneurship.
+                        Career exploration, guest speakers,
+                        industry-aligned training, and financial
+                        literacy prepare them for what comes next.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- EMPLOYMENT -->
+
+            <div class="col-md-6 col-lg-3"
+                 data-aos="fade-up"
+                 data-aos-delay="400"
+                 data-aos-duration="1000">
+
+                <div class="pathway-stage"
+                     style="
+                        --stage-color:#20bfa8;
+                        --stage-background:#e3f8f4;
+                        --stage-text:#087d6c;
+                     ">
+
+                    <span class="stage-label">
+                        High School to Age 24
+                    </span>
+
+                    <h4>Employment</h4>
+
+                    <p>
+                        Young people put their skills to work
+                        through paid leadership roles,
+                        stipend programs, work-based learning,
+                        and workforce training, with support
+                        continuing up to two years after high school
+                        as they transition into college, careers,
+                        or business ownership.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             FIVE CORE PROGRAMS
+        ========================== -->
+
+        <div class="row mb-4">
+            <div class="col-lg-10 mx-auto text-center"
+                 data-aos="fade-up"
+                 data-aos-duration="1000">
+
+                <h3 class="program-section-title">
+                    Our Five Core Programs
+                </h3>
+
+                <p class="text-muted">
+                    Five connected programs support young people
+                    through every stage of their development.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- PROGRAM 1: STEAM EDUCATION -->
+
+            <div class="col-md-6 col-lg-4"
+                 data-aos="fade-up"
+                 data-aos-delay="100"
+                 data-aos-duration="1000">
+
+                <div class="card site-card core-program-card h-100">
+
+                    <div class="core-program-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h4>STEAM Education &amp; Innovation</h4>
+
+                    <p class="mb-0">
+                        Hands-on science, technology, engineering,
+                        arts, and math, from first-time maker
+                        projects to competitive robotics and
+                        cybersecurity teams. Youth build digital
+                        literacy, creativity, technical confidence,
+                        and problem-solving skills through robotics,
+                        coding and game development, digital media
+                        and design, 3D design and printing,
+                        and STEAM labs.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- PROGRAM 2: YOUTH DEVELOPMENT -->
+
+            <div class="col-md-6 col-lg-4"
+                 data-aos="fade-up"
+                 data-aos-delay="200"
+                 data-aos-duration="1000">
+
+                <div class="card site-card core-program-card h-100">
+
+                    <div class="core-program-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Youth Development &amp; Mentoring</h4>
+
+                    <p class="mb-0">
+                        Caring adults and peer leaders help
+                        young people grow as whole people.
+                        Programming includes mentorship,
+                        leadership councils and peer leader roles,
+                        social-emotional learning,
+                        healthy relationships, and community-led
+                        projects that give youth a real voice
+                        in shaping their neighborhoods.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- PROGRAM 3: WORKFORCE -->
+
+            <div class="col-md-6 col-lg-4"
+                 data-aos="fade-up"
+                 data-aos-delay="300"
+                 data-aos-duration="1000">
+
+                <div class="card site-card core-program-card h-100">
+
+                    <div class="core-program-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Workforce &amp; Career Pathways</h4>
+
+                    <p class="mb-0">
+                        We connect learning to earning.
+                        Youth take part in career exploration,
+                        job readiness and resume building,
+                        financial literacy, industry certifications,
+                        entrepreneurship, and paid work experiences
+                        that lead to college, careers,
+                        and small business ownership.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- PROGRAM 4: SAFE SPACES -->
+
+            <div class="col-md-6 col-lg-4"
+                 data-aos="fade-up"
+                 data-aos-delay="100"
+                 data-aos-duration="1000">
+
+                <div class="card site-card core-program-card h-100">
+
+                    <div class="core-program-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Safe Spaces</h4>
+
+                    <p>
+                        Young people can't thrive when barriers
+                        stand in the way. Our Safe Spaces program
+                        provides wraparound support, navigation,
+                        and access to resources so youth can stay
+                        focused on learning, growing, and moving forward.
+                    </p>
+
+                    <p>
+                        We help young people and their families
+                        connect with the services they need,
+                        whether that's food, housing, transportation,
+                        health and wellness, or school support,
+                        and we walk alongside them through the process
+                        rather than simply handing off a referral.
+                    </p>
+
+                    <p class="mb-0">
+                        Every Code 4 Hood site is a welcoming,
+                        supervised space where youth feel they belong
+                        and know they have trusted adults in their corner.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- PROGRAM 5: PREVENTION -->
+
+            <div class="col-md-6 col-lg-4"
+                 data-aos="fade-up"
+                 data-aos-delay="200"
+                 data-aos-duration="1000">
+
+                <div class="card site-card core-program-card h-100">
+
+                    <div class="core-program-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+
+                    <h4>Prevention &amp; Intervention</h4>
+
+                    <p>
+                        Every young person deserves to grow up
+                        safe and healthy. Our Prevention &amp;
+                        Intervention program works to reduce violence
+                        and substance use in our community by reaching
+                        youth early and responding when they need
+                        support most.
+                    </p>
+
+                    <p>
+                        Prevention programming includes substance use
+                        prevention education, violence prevention,
+                        conflict resolution, mental health and emotional
+                        wellness, and youth-led prevention campaigns.
+                    </p>
+
+                    <p class="mb-0">
+                        For young people facing higher risk,
+                        we provide intervention support such as
+                        intensive mentoring, conflict mediation,
+                        restorative practices, and connection to
+                        specialized services and community violence
+                        intervention partners.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             WHY IT WORKS
+        ========================== -->
+
+        <div class="row mt-5">
+
+            <div class="col-lg-10 mx-auto"
+                 data-aos="fade-up"
+                 data-aos-duration="1000">
+
+                <div class="why-it-works">
+
+                    <h3 class="program-section-title">
+                        Why It Works
+                    </h3>
+
+                    <p>
+                        Young people don't outgrow Code 4 Hood,
+                        they grow with it. A 10-year-old who builds
+                        their first robot can become the middle
+                        schooler competing on a robotics team,
+                        the high schooler earning a stipend
+                        as a peer leader, and the young adult
+                        launching a career. That continuity,
+                        combined with hands-on learning,
+                        mentorship, real-world experience,
+                        wraparound support, and a commitment
+                        to keeping young people safe,
+                        is what turns early curiosity
+                        into lasting opportunity.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =========================
+             OUR APPROACH
+        ========================== -->
+
+        <div class="row mt-5">
+
+            <div class="col-lg-10 mx-auto">
+
+                <div class="approach-box p-4 p-md-5"
+                     data-aos="zoom-in"
+                     data-aos-duration="1000">
+
+                    <h3 class="program-section-title">
+                        Our Approach
+                    </h3>
+
+                    <p>
+                        At Code 4 Hood, young people don't just
+                        attend a program, they grow with us.
+                        Our approach follows one connected pathway
+                        that meets youth where they are,
+                        from age 10 through age 24,
+                        and moves them step by step
+                        from curiosity to career.
+                    </p>
+
+                    <!-- Four Approach Stages -->
+
+                    <div class="mt-4 mb-4">
+
+                        <p class="approach-step">
+                            <strong>Enrichment</strong>
+                            sparks interest through fun,
+                            hands-on STEAM experiences.
+                        </p>
+
+                        <p class="approach-step">
+                            <strong>Engagement</strong>
+                            deepens learning through teams,
+                            competitions, labs, and mentorship.
+                        </p>
+
+                        <p class="approach-step">
+                            <strong>Education</strong>
+                            connects interests to real career
+                            pathways, skills, and training.
+                        </p>
+
+                        <p class="approach-step">
+                            <strong>Employment</strong>
+                            puts those skills to work through
+                            paid experiences, workforce training,
+                            and support into college, careers,
+                            and entrepreneurship.
+                        </p>
+
+                    </div>
+
+                    <!-- Core Programs Integration -->
+
+                    <p>
+                        Our five core programs are woven through
+                        every stage of this pathway.
+                        STEAM Education &amp; Innovation,
+                        Youth Development &amp; Mentoring,
+                        Workforce &amp; Career Pathways,
+                        Safe Spaces, and Prevention &amp; Intervention
+                        work together so that young people
+                        build skills, gain support,
+                        and stay safe as they grow.
+                    </p>
+
+                    <!-- Youth Outcomes -->
+
+                    <p class="mb-2">
+                        <strong>
+                            Through this approach, youth:
+                        </strong>
+                    </p>
+
+                    <ul class="ps-3 approach-benefits">
+
+                        <li>
+                            Discover new interests,
+                            talents, and possibilities
+                        </li>
+
+                        <li>
+                            Build confidence, leadership,
+                            and healthy decision-making skills
+                        </li>
+
+                        <li>
+                            Develop the technical and professional
+                            skills employers are looking for
+                        </li>
+
+                        <li>
+                            Gain access to the support and resources
+                            needed to overcome barriers
+                        </li>
+
+                        <li>
+                            Strengthen their connection to caring
+                            adults, peers, and their community
+                        </li>
+
+                    </ul>
+
+                    <!-- Final Outcome -->
+
+                    <p class="mb-0 mt-3">
+                        The result is a holistic pathway that
+                        prepares young people for success in school,
+                        careers, and life, and helps build safer,
+                        stronger communities along the way.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- END OUR PROGRAMS SECTION -->
+
+    <!-- =========================
+         MISSION & VISION SECTION
+    ========================== -->
+    <section>
+        <div class="container py-4 py-xl-5">
+
+            <!-- Section Heading -->
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                    <h1><span style="text-decoration: underline;">Our Mission &amp; Vision</span></h1>
+                    <p class="w-lg-50">Who we are and what our goals are.</p>
+                </div>
+            </div>
+
+            <!-- Mission & Vision Cards -->
+            <div class="row gy-4 row-cols-1 row-cols-md-2">
+
+                <!-- Mission Card -->
+                <div class="col-xl-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card site-card h-100">
+                        <img class="card-img-top w-100 fit-cover"
+                            src="assets/img/pexels-photo-7869085.jpeg"
+                            alt="Young students and teacher collaborating on a robotics project in a classroom setting."
+                            style="height: 200px;">
+                        <div class="card-body p-4">
+                            <p class="text-primary mb-2">Our Mission</p>
+                            <p class="mb-3">
+                                Code 4 Hood empowers youth with the skills, opportunities, and support systems they need
+                                to thrive in school, careers, and life. Through hands-on STEAM learning, workforce
+                                development pathways, mentorship, and leadership experiences, we equip young people to
+                                explore innovation, build confidence, and pursue meaningful futures.
+                            </p>
+                            <p class="mb-3">
+                                We focus on creating equitable access to opportunity—particularly for youth in underserved
+                                communities—by providing engaging programs that connect education, real-world skills, and
+                                community impact.
+                            </p>
+                            <p class="mb-0">
+                                Our work helps young people discover their potential while preparing them to become
+                                problem-solvers, entrepreneurs, and leaders in the industries shaping tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="col-xl-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="card site-card h-100">
+                        <img class="card-img-top w-100 fit-cover"
+                            src="assets/img/Code-for-Hood-and-Operation-Innovate-New-Picture-15.jpg"
+                            alt="Adult mentoring teenager on computer"
+                            style="height: 200px;">
+                        <div class="card-body p-4 h-100">
+                            <p class="text-primary mb-2">Our Vision</p>
+                            <p class="mb-3">
+                                We envision communities where every young person—regardless of background—has access to
+                                the tools, mentorship, and experiences needed to build a successful future.
+                            </p>
+                            <p class="mb-0">
+                                Code 4 Hood strives to cultivate a generation of innovators, creators, and leaders who
+                                are equipped to shape technology, strengthen their communities, and drive positive change
+                                in the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================
+                 CORE VALUES SECTION
+            ========================== -->
+            <div class="row mt-5 mb-4">
+                <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                    <h2><span style="text-decoration: underline;">Core Values</span></h2>
+                    <p class="w-lg-50">The principles that guide our work and impact.</p>
+                </div>
+            </div>
+
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Access &amp; Equity</h5>
+                            <p class="mb-0">
+                                Opportunity should not be determined by zip code. We are committed to expanding access
+                                to high-quality learning experiences, career pathways, and mentorship for youth who have
+                                historically been underrepresented in STEAM and emerging industries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Hands-On Learning</h5>
+                            <p class="mb-0">
+                                We believe youth learn best by doing. Our programs emphasize project-based learning,
+                                real-world problem solving, and interactive experiences that spark curiosity and creativity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Youth Voice &amp; Leadership</h5>
+                            <p class="mb-0">
+                                Young people are not just participants—they are leaders. We empower youth to take
+                                ownership of ideas, lead initiatives, and contribute meaningfully to their communities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Innovation &amp; Exploration</h5>
+                            <p class="mb-0">
+                                Curiosity drives progress. We encourage experimentation, creativity, and forward-thinking
+                                solutions that prepare youth to thrive in a rapidly evolving world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Community &amp; Collaboration</h5>
+                            <p class="mb-0">
+                                Strong communities create stronger opportunities. We partner with schools, industry
+                                leaders, nonprofits, and families to build a supportive ecosystem around youth success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card site-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="text-primary">Pathways to the Future</h5>
+                            <p class="mb-0">
+                                Our programs are designed to open doors—from early STEAM exposure to workforce
+                                development and entrepreneurship—helping youth discover and pursue meaningful career pathways.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-primary bg-primary border-0 mt-4 rounded-0" href="contact.html" data-aos="fade-up" data-aos-duration="1000">
+                Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- =========================
+         GALLERY CTA SECTION
+    ========================== -->
+    <section class="py-4 py-xl-5">
+        <div class="container">
+            <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 370px;"
+                data-aos="fade-up" data-aos-duration="1000">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="text-white p-4 p-md-5">
+                            <h2 class="fw-bold text-white mb-3">Visit Our Gallery</h2>
+                            <p class="mb-4">
+                                Check out some of our events, some of our students and some of our projects!
+                            </p>
+                            <div class="my-3">
+                                <a class="btn btn-primary btn-lg me-2 bg-primary rounded-0 border-0" href="gallery.html">
+                                    Gallery
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;">
+                        <img class="w-100 h-100 fit-cover"
+                            src="assets/img/Home%20Page%20pic%20.jpg"
+                            alt="Student working on robotics project">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <div id="footer-placeholder"></div>
+    <!-- =========================
+         JAVASCRIPT FILES
+    ========================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery-baguetteBox.min.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery.js"></script>
+    <script src="assets/js/components.js"></script>
+
+    <!-- =========================
+         AOS INITIALIZATION
+    ========================== -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

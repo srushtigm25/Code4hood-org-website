@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Code4Hood</title>
+    <meta name="description" content="Contact Code4Hood in Sacramento. Find our locations, business hours, phone number, and contact form.">
+
+    <link rel="icon" type="image/png" href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Projects-Grid-Horizontal-images.css">
+    <link rel="stylesheet" href="assets/css/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Features-Large-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --brand-green: #79b104;
+            --brand-green-dark: #628f03;
+            --text-dark: #212529;
+            --text-muted: #606770;
+            --card-bg: #f8f9fa;
+            --card-border: #e9ecef;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #fff;
+            color: var(--text-dark);
+            --bs-primary: #79b104;
+            --bs-primary-rgb: 121, 177, 4;
+        }
+
+        /* Contact Page */
+
+        .contact-section {
+            padding: 65px 0 90px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .contact-heading h1 {
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-heading p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-social {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        .contact-social a {
+            color: #212529;
+            font-size: 28px;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .contact-social a:hover {
+            color: var(--brand-green);
+            transform: translateY(-2px);
+        }
+
+        /* Section Headings */
+
+        .contact-subheading {
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        /* Location Cards */
+
+        .locations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .location-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 17px 18px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .location-card:hover {
+            border-color: #c9dba7;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            background: var(--brand-green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+            font-size: 21px;
+        }
+
+        .location-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .location-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 5px;
+        }
+
+        .location-info p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .location-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .location-info a:hover {
+            color: var(--brand-green-dark);
+            text-decoration: underline;
+        }
+
+        /* Other Contact Details */
+
+        .contact-details {
+            border-top: 1px solid #e9ecef;
+            margin-top: 25px;
+            padding-top: 24px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 23px;
+        }
+
+        .contact-detail-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail-item p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .contact-detail-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .contact-detail-item a:hover {
+            color: var(--brand-green-dark);
+            text-decoration: underline;
+        }
+
+        /* Form */
+
+        .contact-form-column {
+            padding-left: 30px;
+        }
+
+        .form-intro {
+            margin-bottom: 20px;
+        }
+
+        .form-intro h2 {
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-intro p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .fillout-container {
+            width: 100%;
+            min-height: 500px;
+        }
+
+        /* Footer */
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--brand-green);
+            padding-left: 5px;
+        }
+
+        .social-icon {
+            color: #ccc;
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--brand-green);
+            transform: scale(1.2);
+        }
+
+        /* Responsive Layout */
+
+        @media (max-width: 991px) {
+            .contact-form-column {
+                padding-left: 12px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .contact-section {
+                padding: 40px 0 65px;
+            }
+
+            .contact-heading {
+                margin-bottom: 35px;
+            }
+
+            .contact-heading h1 {
+                font-size: 29px;
+            }
+
+            .contact-form-column {
+                margin-top: 30px;
+                padding-left: 12px;
+            }
+
+            .location-card {
+                padding: 15px;
+            }
+
+            .contact-icon {
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Existing Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        function setActiveLink() {
+            let currentPage = window.location.pathname.split('/').pop();
+
+            if (!currentPage) {
+                currentPage = 'index.html';
+            }
+
+            const navLinks = document.querySelectorAll(
+                '.navbar-nav .nav-link'
+            );
+
+            const dropdownItems = document.querySelectorAll(
+                '.dropdown-item'
+            );
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+
+                if (href === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            dropdownItems.forEach(item => {
+                const href = item.getAttribute('href');
+
+                if (href === currentPage) {
+                    item.classList.add('active');
+
+                    const parentDropdown = item.closest('.dropdown');
+
+                    if (parentDropdown) {
+                        const parentToggle =
+                            parentDropdown.querySelector('.dropdown-toggle');
+
+                        if (parentToggle) {
+                            parentToggle.classList.add('active');
+                        }
+                    }
+                }
+            });
+        }
+
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Unable to load navbar');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                setActiveLink();
+            })
+            .catch(error => console.error(error));
+    </script>
+
+    <!-- CONTACT PAGE -->
+
+    <main class="contact-section" style="margin-top:70px;">
+
+        <div class="container">
+
+            <!-- Page Heading -->
+
+            <div class="contact-heading">
+
+                <h1>Contact us</h1>
+
+                <p>Reach out today!</p>
+
+                <div class="contact-social">
+
+                    <a href="https://www.facebook.com/code4hood"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/code4hood/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@code4hood"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center g-5">
+
+                <!-- LEFT COLUMN -->
+
+                <div class="col-md-6 col-lg-5">
+
+                    <h2 class="contact-subheading">
+                        Our Locations
+                    </h2>
+
+                    <div class="locations-list">
+
+                        <!-- Administrative Office -->
+
+                        <div class="location-card">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div class="location-info">
+
+                                <h3>Administrative Office</h3>
+
+                                <p>
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=4625+44th+Street+%2315+Sacramento+CA+95820"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        4625 44th Street #15<br>
+                                        Sacramento, CA 95820
+
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- STEAM Studio -->
+
+                        <div class="location-card">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div class="location-info">
+
+                                <h3>STEAM Studio &amp; Maker Space</h3>
+
+                                <p>
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=4625+44th+Street+%239+Sacramento+CA+95820"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        4625 44th Street #9<br>
+                                        Sacramento, CA 95820
+
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Family and Community Collective -->
+
+                        <div class="location-card">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+
+                            <div class="location-info">
+
+                                <h3>Family and Community Collective</h3>
+
+                                <p>
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=7851+35th+Avenue+Sacramento+CA+95824"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+
+                                        7851 35th Avenue<br>
+                                        Sacramento, CA 95824
+
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PHONE, EMAIL, HOURS -->
+
+                    <div class="contact-details">
+
+                        <!-- Phone -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Office/Mobile</h3>
+
+                                <p>
+                                    <a href="tel:+19167579475">
+                                        (916) 757-9475
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Email -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Email</h3>
+
+                                <p>
+                                    <a href="mailto:hello@code4hood.org">
+                                        hello@Code4hood.org
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Business Hours -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Business Hours</h3>
+
+                                <p>
+                                    Monday to Friday: 12:00 PM to 6:00 PM<br>
+                                    Saturday: Events only<br>
+                                    Sunday: Closed
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="col-md-6 col-lg-5 contact-form-column">
+
+                    <div class="form-intro">
+
+                        <h2>Send Us a Message</h2>
+
+                        <p>
+                            Have a question? We'd love to hear from you.
+                        </p>
+
+                    </div>
+
+                    <!-- Existing Fillout Form -->
+
+                    <div class="fillout-container"
+                         data-fillout-id="nUnNe1h9c4us"
+                         data-fillout-embed-type="standard"
+                         data-fillout-inherit-parameters=""
+                         data-fillout-dynamic-resize="">
+                    </div>
+
+                    <script src="https://server.fillout.com/embed/v1/"></script>
+
+                    <script>
+                        // Preserve existing URL email prefill behavior.
+
+                        const urlParams =
+                            new URLSearchParams(window.location.search);
+
+                        const email = urlParams.get('email');
+
+                        if (email) {
+                            setTimeout(() => {
+                                const emailInput =
+                                    document.querySelector('input[type="email"]');
+
+                                if (emailInput) {
+                                    emailInput.value = email;
+                                    emailInput.dispatchEvent(
+                                        new Event('input', {
+                                            bubbles: true
+                                        })
+                                    );
+                                }
+                            }, 1500);
+                        }
+                    </script>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <!-- LOGO + ABOUT -->
+
+                <div class="col-md-4">
+
+                    <img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png"
+                         alt="Code4Hood logo"
+                         style="max-width:180px;"
+                         class="mb-3">
+
+                    <p style="font-size:14px; line-height:1.7; color:#ccc;">
+                        Sacramento’s only comprehensive S.T.E.A.M.E.D.
+                        youth workforce development program,
+                        empowering youth through technology,
+                        creativity, and opportunity.
+                    </p>
+
+                </div>
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-md-4">
+
+                    <h6 class="fw-bold mb-3"
+                        style="color:#79b104;">
+                        Quick Links
+                    </h6>
+
+                    <ul class="list-unstyled" style="line-height:2;">
+
+                        <li>
+                            <a href="contact.html" class="footer-link">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="ways-to-donate.html" class="footer-link">
+                                Donate
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- SOCIAL -->
+
+                <div class="col-md-4">
+
+                    <h6 class="fw-bold mb-3"
+                        style="color:#79b104;">
+                        Connect With Us
+                    </h6>
+
+                    <div class="d-flex gap-3 fs-5">
+
+                        <a href="https://www.facebook.com/codeforhood"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-icon"
+                           aria-label="Facebook">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/code4hood/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-icon"
+                           aria-label="Instagram">
+
+                            <i class="bi bi-instagram"></i>
+
+                        </a>
+
+                        <a href="https://www.tiktok.com/@code4hood"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-icon"
+                           aria-label="TikTok">
+
+                            <i class="bi bi-tiktok"></i>
+
+                        </a>
+
+                    </div>
+
+                    <p class="mt-3"
+                       style="font-size:14px; color:#ccc;">
+                        Stay connected and follow our journey
+                        as we empower the next generation.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr class="border-secondary mt-4">
+
+            <div class="text-center"
+                 style="font-size:13px; color:#aaa;">
+                Built with ❤️ for community impact
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- EXISTING WEBSITE SCRIPTS -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery-baguetteBox.min.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery.js"></script>
+    <script src="assets/js/js/aos.min.js"></script>
+
+</body>
+</html>

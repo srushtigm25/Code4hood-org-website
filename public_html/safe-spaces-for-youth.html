@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light" style="font-family:Kanit, sans-serif;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Safe Spaces | Code4Hood</title>
+    <meta name="description" content="Safe Spaces | Code4Hood">
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="1050x450"
+        href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png"
+    >
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap"
+    >
+
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Projects-Grid-Horizontal-images.css">
+    <link rel="stylesheet" href="assets/css/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Features-Large-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    >
+
+    <style>
+
+        .newsletter-section {
+            background: #79b104;
+            padding: 20px 15px;
+            color: white;
+            border-radius: 0;
+        }
+
+        .newsletter-section h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .newsletter-section p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .newsletter-form .form-control {
+            min-height: 42px;
+            border-radius: 0;
+            border: none;
+            font-size: 15px;
+        }
+
+        .newsletter-form .btn {
+            min-height: 42px;
+            border-radius: 0;
+            font-size: 17px;
+            font-weight: 600;
+            background: #222;
+            border: none;
+        }
+
+        .newsletter-form .btn:hover {
+            background: #111;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #79b104;
+            padding-left: 5px;
+        }
+
+        .social-icon {
+            color: #ccc;
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            color: #79b104;
+            transform: scale(1.2);
+        }
+
+    </style>
+
+</head>
+
+
+<body
+    style="
+        --bs-primary:#79b104;
+        --bs-primary-rgb:121,177,4;
+        font-family:Kanit, sans-serif;
+        background:white;
+    "
+>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<div id="navbar"></div>
+
+<script>
+    function setActiveLink() {
+        let currentPage = window.location.pathname.split('/').pop();
+
+        if (!currentPage || currentPage === '') {
+            currentPage = 'index.html';
+        }
+
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+
+            if (href === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        dropdownItems.forEach(item => {
+            const href = item.getAttribute('href');
+
+            if (href === currentPage) {
+                item.classList.add('active');
+
+                const parentDropdown = item.closest('.dropdown');
+
+                if (parentDropdown) {
+                    const parentToggle =
+                        parentDropdown.querySelector('.dropdown-toggle');
+
+                    if (parentToggle) {
+                        parentToggle.classList.add('active');
+                    }
+                }
+            }
+        });
+    }
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            setActiveLink();
+        });
+</script>
+
+
+<!-- =========================
+     TOP SPACING
+========================= -->
+
+<section style="margin-top:70px;"></section>
+
+
+<!-- =========================
+     SAFE SPACES CONTENT
+========================= -->
+
+<section class="py-5 bg-white" id="safe-spaces-program">
+
+    <div class="container">
+
+
+        <!-- Page Header -->
+
+        <div
+            class="text-center mb-5"
+            data-aos="fade-up"
+            data-aos-duration="800"
+        >
+
+            <h2
+                class="fw-bold mb-3"
+                style="
+                    color:#1f1f1f;
+                    font-size:2.2rem;
+                "
+            >
+                Safe Spaces Program
+            </h2>
+
+            <div
+                style="
+                    width:90px;
+                    height:4px;
+                    background:#79b104;
+                    margin:14px auto 20px auto;
+                "
+            ></div>
+
+            <p
+                class="mx-auto mb-3"
+                style="
+                    max-width:900px;
+                    color:#79b104;
+                    font-size:1.15rem;
+                    font-weight:700;
+                    line-height:1.7;
+                "
+            >
+                Stabilization. Support. Pathways Forward.
+            </p>
+
+            <p
+                class="mx-auto mb-0"
+                style="
+                    max-width:920px;
+                    color:#555;
+                    font-size:1.02rem;
+                    line-height:1.9;
+                "
+            >
+                The Safe Spaces Program provides youth with wraparound support,
+                navigation, and access to resources that help remove barriers
+                to their success.
+            </p>
+
+        </div>
+
+
+        <!-- Introduction -->
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+                        We recognize that it can be difficult for a young person
+                        to focus on school, employment, personal development, or
+                        their future when basic needs are unmet. Safe Spaces
+                        helps youth address those immediate needs, build
+                        stability, and connect to opportunities that help them
+                        move forward.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Who We Serve -->
+
+        <div
+            class="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-duration="800"
+        >
+
+            <h3
+                class="fw-bold"
+                style="
+                    color:#1f1f1f;
+                    font-size:1.6rem;
+                "
+            >
+                Who We Serve
+            </h3>
+
+            <p
+                class="mx-auto mb-0"
+                style="
+                    max-width:860px;
+                    color:#666;
+                    line-height:1.8;
+                "
+            >
+                Safe Spaces supports youth who may be:
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <ul
+                        style="
+                            color:#555;
+                            line-height:2;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+
+                        <li>Experiencing housing instability or homelessness</li>
+
+                        <li>
+                            Facing food, clothing, transportation, or other
+                            basic-needs challenges
+                        </li>
+
+                        <li>
+                            Justice-involved or reentering the community
+                        </li>
+
+                        <li>
+                            Transitioning from foster care or other systems of care
+                        </li>
+
+                        <li>
+                            Disconnected or at risk of becoming disconnected
+                            from school or employment
+                        </li>
+
+                        <li>
+                            Navigating challenging life circumstances or barriers
+                            to stability
+                        </li>
+
+                        <li>
+                            In need of additional support, resources, or guidance
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- What Safe Spaces Provides -->
+
+        <div
+            class="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-duration="800"
+        >
+
+            <h3
+                class="fw-bold"
+                style="
+                    color:#1f1f1f;
+                    font-size:1.6rem;
+                "
+            >
+                What Safe Spaces Provides
+            </h3>
+
+            <p
+                class="mx-auto mb-0"
+                style="
+                    max-width:860px;
+                    color:#666;
+                    line-height:1.8;
+                "
+            >
+                Our Safe Spaces Program uses a stabilization-first,
+                youth-centered approach that meets young people where they are
+                and helps them identify the resources, support, and next steps
+                they need to move forward.
+            </p>
+
+        </div>
+
+
+        <!-- Youth Navigation & Personalized Support -->
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <h4
+                        class="fw-bold mb-3"
+                        style="color:#1f1f1f;"
+                    >
+                        Youth Navigation &amp; Personalized Support
+                    </h4>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+                        Youth receive individualized support from a Youth
+                        Navigator who helps identify needs, develop goals,
+                        connect to resources, coordinate services, advocate when
+                        needed, and provide consistent follow-up.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Stabilization & Basic Needs Support -->
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <h4
+                        class="fw-bold mb-3"
+                        style="color:#1f1f1f;"
+                    >
+                        Stabilization &amp; Basic Needs Support
+                    </h4>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:1rem;
+                        "
+                    >
+                        We help youth address immediate barriers that may prevent
+                        them from successfully participating in school,
+                        employment, training, or other opportunities.
+                    </p>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:1rem;
+                        "
+                    >
+                        Support may include access to:
+                    </p>
+
+                    <ul
+                        style="
+                            color:#555;
+                            line-height:2;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+
+                        <li>Housing support and referrals</li>
+                        <li>Food and basic necessities</li>
+                        <li>Clothing and personal care items</li>
+                        <li>Transportation assistance</li>
+                        <li>Education and academic support</li>
+                        <li>School re-engagement</li>
+                        <li>Employment and workforce resources</li>
+                        <li>Mental health and wellness referrals</li>
+                        <li>Life skills and independent living resources</li>
+
+                        <li>
+                            Community services and additional referrals based on
+                            individual needs
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- From Stabilization to Opportunity -->
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <h4
+                        class="fw-bold mb-3"
+                        style="color:#1f1f1f;"
+                    >
+                        From Stabilization to Opportunity
+                    </h4>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:1rem;
+                        "
+                    >
+                        Safe Spaces is more than meeting an immediate need. Our
+                        goal is to help young people move from stabilization to
+                        opportunity.
+                    </p>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:1rem;
+                        "
+                    >
+                        Once immediate barriers are addressed, Youth Navigators
+                        help participants identify their next step. Youth may
+                        transition into Code 4 Hood’s broader ecosystem of STEM
+                        education, workforce and career pathways, and youth
+                        development and empowerment programs, or be connected to
+                        trusted community partners when another organization can
+                        better meet their needs.
+                    </p>
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+                        The goal is to make sure young people don’t simply receive
+                        a referral, they have support navigating what comes next.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Who Can Refer Youth -->
+
+        <div
+            class="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-duration="800"
+        >
+
+            <h3
+                class="fw-bold"
+                style="
+                    color:#1f1f1f;
+                    font-size:1.6rem;
+                "
+            >
+                Who Can Refer Youth?
+            </h3>
+
+            <p
+                class="mx-auto mb-0"
+                style="
+                    max-width:860px;
+                    color:#666;
+                    line-height:1.8;
+                "
+            >
+                Youth can enter Safe Spaces through referrals from trusted
+                community and system partners, as well as directly from youth
+                and families.
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center mb-5">
+
+            <div
+                class="col-lg-10"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900"
+            >
+
+                <div
+                    class="p-4 p-md-5 rounded-4 shadow-sm border-0"
+                    style="
+                        background:#f8f9fa;
+                        border-left:5px solid #79b104;
+                    "
+                >
+
+                    <p
+                        style="
+                            color:#555;
+                            line-height:1.9;
+                            font-size:1.02rem;
+                            margin-bottom:1rem;
+                        "
+                    >
+                        Referral sources may include:
+                    </p>
+
+                    <ul
+                        style="
+                            color:#555;
+                            line-height:2;
+                            font-size:1.02rem;
+                            margin-bottom:0;
+                        "
+                    >
+
+                        <li>Schools and school districts</li>
+                        <li>Probation and reentry programs</li>
+                        <li>Foster care and social service agencies</li>
+                        <li>Community-based organizations</li>
+                        <li>Youth-serving organizations</li>
+                        <li>Families and caregivers</li>
+                        <li>Self-referrals</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- =========================
+     NEWSLETTER SECTION
+========================= -->
+
+<section
+    style="
+        padding:0 0 80px 0;
+        background:#ffffff;
+    "
+>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10 fade-up-section">
+
+                <div class="newsletter-section text-center">
+
+                    <div
+                        style="
+                            position:relative;
+                            width:100%;
+                            min-height:300px;
+                            margin-top:20px;
+                            overflow:hidden;
+                        "
+                    >
+
+                        <iframe
+                            title="Signup form powered by Zeffy"
+                            style="
+                                position:absolute;
+                                border:0;
+                                top:0;
+                                left:0;
+                                right:0;
+                                bottom:0;
+                                width:100%;
+                                height:100%;
+                            "
+                            src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-3240"
+                            allowTransparency="true"
+                        >
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div id="footer-placeholder"></div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.min.js"></script>
+<script src="assets/js/components.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+    });
+</script>
+
+
+</body>
+</html>

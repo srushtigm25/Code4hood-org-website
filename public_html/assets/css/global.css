@@ -1,0 +1,62 @@
+/* =========================
+   GLOBAL VARIABLES
+========================== */
+:root {
+    --primary: #79b104;
+    --dark: #212529;
+    --text-muted: #ccc;
+}
+
+/* =========================
+   FOOTER STYLES
+========================== */
+/* .footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.social-icon {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--primary);
+    transform: scale(1.2);
+} */
+/* =========================
+   FOOTER FIX (OVERRIDE BOOTSTRAP)
+========================== */
+footer a {
+    color: var(--text-muted) !important;
+    text-decoration: none !important;
+}
+
+footer a:hover {
+    color: var(--primary) !important;
+}
+
+/* Keep your existing class too */
+.footer-link {
+    color: var(--text-muted) !important;
+    text-decoration: none !important;
+}
+
+.footer-link:hover {
+    color: var(--primary) !important;
+    padding-left: 5px;
+}
+/* =========================
+   NAVBAR ACTIVE STATE
+========================== */
+.navbar .nav-link.active,
+.navbar .dropdown-item.active {
+    color: var(--primary) !important;
+    font-weight: 600;
+}

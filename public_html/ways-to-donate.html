@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light" style="font-family:Kanit, sans-serif;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ways To Donate | Code4Hood</title>
+    <meta name="description" content="Ways To Donate | Code4Hood">
+    <link rel="icon" type="image/png" sizes="1050x450" href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Projects-Grid-Horizontal-images.css">
+    <link rel="stylesheet" href="assets/css/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Features-Large-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    
+
+    <style>
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #79b104;
+            padding-left: 5px;
+        }
+
+        .social-icon {
+            color: #ccc;
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            color: #79b104;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body style="--bs-primary:#79b104;--bs-primary-rgb:121,177,4;font-family:Kanit, sans-serif;background:white;">
+    
+
+    <div id="navbar"></div>
+
+    <script>
+        function setActiveLink() {
+            let currentPage = window.location.pathname.split('/').pop();
+            if (!currentPage || currentPage === '') {
+                currentPage = 'index.html';
+            }
+
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            dropdownItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.classList.add('active');
+                    const parentDropdown = item.closest('.dropdown');
+                    if (parentDropdown) {
+                        const parentToggle = parentDropdown.querySelector('.dropdown-toggle');
+                        if (parentToggle) {
+                            parentToggle.classList.add('active');
+                        }
+                    }
+                }
+            });
+        }
+
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                setActiveLink();
+            });
+    </script>
+
+    <section style="margin-top:70px;"></section>
+
+    <section style="background: #ffffff; padding: 60px 0;">
+        <div class="container">
+            <div class="row align-items-start gy-5">
+                <!-- LEFT COLUMN - Content -->
+                <div class="col-lg-6">
+                    <h1 style="font-size: 2.5rem; font-weight: 600; color: #1f1f1f; margin-bottom: 30px;">Donate to Code4Hood</h1>
+
+                    <!-- Monthly Giving Section -->
+                    <div style="margin-bottom: 50px;">
+                        <h2 style="font-size: 1.5rem; font-weight: 600; color: #1f1f1f; margin-bottom: 15px;">Monthly Giving</h2>
+                        <p style="font-size: 0.95rem; font-weight: 600; color: #79b104; margin-bottom: 15px;">Join the Village. Create Consistent Impact.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 12px;">Becoming a monthly donor means you're part of something bigger—a community of supporters committed to long-term change. Your recurring gift allows us to plan, grow, and consistently serve youth year-round.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 20px;"><strong>No amount is too small—consistent giving creates powerful impact over time.</strong></p>
+
+                        <p style="color: #555; line-height: 1.8; font-weight: 600; margin-bottom: 12px;">As a monthly giver, you help:</p>
+                        <ul style="color: #555; line-height: 2; margin-bottom: 20px; padding-left: 20px;">
+                            <li>Sustain ongoing programs and safe spaces</li>
+                            <li>Expand access to underserved youth</li>
+                            <li>Provide consistent mentorship and resources</li>
+                            <li>Build a stronger, more stable future for our organization</li>
+                        </ul>
+                        <p style="color: #555; line-height: 1.8; font-weight: 600;">Give monthly. Grow impact. Change lives.</p>
+                    </div>
+
+                    <!-- Sponsoring a Youth Section -->
+                    <div style="margin-bottom: 50px;">
+                        <h2 style="font-size: 1.5rem; font-weight: 600; color: #1f1f1f; margin-bottom: 15px;">Sponsoring a Youth</h2>
+                        <p style="font-size: 0.95rem; font-weight: 600; color: #79b104; margin-bottom: 15px;">Make It Personal. Make It Impactful.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 12px;">Sponsoring youth is one of the most direct ways to change a life. Your sponsorship ensures that a young person can fully participate in one of our programs—from start to finish—without financial burden.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 20px;"><strong>You're not just covering a cost—you're opening a door.</strong></p>
+
+                        <p style="color: #555; line-height: 1.8; font-weight: 600; margin-bottom: 12px;">What your sponsorship can support:</p>
+                        <ul style="color: #555; line-height: 2; margin-bottom: 20px; padding-left: 20px;">
+                            <li>Full program enrollment for one youth</li>
+                            <li>Access to mentorship and hands-on learning experiences</li>
+                            <li>Transportation, meals, and necessary materials</li>
+                            <li>Confidence, skills, and real-world exposure</li>
+                        </ul>
+                        <p style="color: #555; line-height: 1.8;">Want to go further? Sponsors can receive updates on program impact and the journey they're helping support.</p>
+                    </div>
+
+                    <!-- BDOG Section -->
+                    <div>
+                        <h2 style="font-size: 1.5rem; font-weight: 600; color: #1f1f1f; margin-bottom: 15px;">BDOG (Big Day of Giving)</h2>
+                        <p style="font-size: 0.95rem; font-weight: 600; color: #79b104; margin-bottom: 15px;">Give Big. Make an Immediate Impact.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 12px;">Big Day of Giving (BDOG) is a powerful 24-hour giving movement that brings our community together to support the future of our youth. On this special day, your donation goes even further helping us expand programs, reach more students, and deepen our impact across the communities we serve.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">Your BDOG gift supports hands-on STEAM learning, workforce development, mentorship, and safe spaces for youth who need it most. It's a chance to rally together and make a meaningful difference fast.</p>
+
+                        <p style="color: #555; line-height: 1.8; font-weight: 600; margin-bottom: 12px;">Your donation helps us:</p>
+                        <ul style="color: #555; line-height: 2; margin-bottom: 20px; padding-left: 20px;">
+                            <li>Serve more youth across our programs and communities</li>
+                            <li>Expand STEAM, workforce, and leadership opportunities</li>
+                            <li>Provide access to safe spaces and mentorship</li>
+                            <li>Invest in resources, technology, and program growth</li>
+                        </ul>
+                        <p style="color: #555; line-height: 1.8; font-weight: 600;">One day. One community. A lasting impact.</p>
+                        <a href="https://www.bigdayofgiving.org/give/Code-4-Hood-Edu" target="_blank" class="btn btn-primary border-0 rounded-0" style="background-color: #79b104; color: white; font-size: 17px; margin-top: 20px;">Click to Donate</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN - Donation Form -->
+                <div class="col-lg-6">
+                    <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; position: sticky; top: 100px;">
+                        <h2 style="font-size: 1.5rem; font-weight: 600; color: #1f1f1f; margin-bottom: 25px; text-align: center;">Support Our Mission</h2>
+                        <div>
+                            <div data-zeffy-embed data-form-url="/embed/donation-form/donate-to-make-a-difference-22310"></div>
+                            <div data-zeffy-embed-fallback style="display:none;">
+                              <div style="position:relative;overflow:hidden;height:700px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/embed/donation-form/donate-to-make-a-difference-22310' allowpaymentrequest allowTransparency="true"></iframe></div>
+                            </div>
+                            <script
+                              src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
+                              onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';});">
+                            </script>
+                          </div>
+
+                        <p style="font-size: 12px; color: #999; text-align: center; margin-top: 20px;">
+                            We are a 501(c)(3) charitable organization. All the contributions are tax deductible. No goods or services will be provided in exchange for the contribution.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+                            <!-- <button class="btn btn-primary bg-primary border-0 rounded-0" type="button">Click To Donate</button> -->
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+   
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <!-- LOGO + ABOUT -->
+                <div class="col-md-4">
+                    <img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png"
+                         alt="Code4Hood logo"
+                         style="max-width:180px;"
+                         class="mb-3">
+                    <p style="font-size:14px; line-height:1.7; color:#ccc;">
+                        Sacramento’s only comprehensive S.T.E.A.M.E.D. youth workforce development program,
+                        empowering youth through technology, creativity, and opportunity.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3" style="color:#79b104;">Quick Links</h6>
+                    <ul class="list-unstyled" style="line-height:2;">
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="ways-to-donate.html" class="footer-link">Donate</a></li>
+                    </ul>
+                </div>
+
+                <!-- SOCIAL -->
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3" style="color:#79b104;">Connect With Us</h6>
+
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://www.facebook.com/code4hood" target="_blank" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/code4hood/" target="_blank" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@code4hood" target="_blank" class="social-icon">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+
+                    <p class="mt-3" style="font-size:14px; color:#ccc;">
+                        Stay connected and follow our journey as we empower the next generation.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-secondary mt-4">
+
+            <div class="text-center" style="font-size:13px; color:#aaa;">
+                Built with ❤️ for community impact
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery-baguetteBox.min.js"></script>
+    <script src="assets/js/js/Lightbox-Gallery.js"></script>
+    <script src="assets/js/js/aos.min.js"></script>
+</body>
+
+</html>
