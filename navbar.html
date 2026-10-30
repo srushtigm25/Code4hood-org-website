@@ -1,17 +1,39 @@
+
 <!-- =========================
      HEADER / NAVIGATION
 ========================== -->
-<nav class="navbar navbar-expand-md fixed-top py-3 text-white" style="background: rgb(33, 37, 41); width: 100%;">
+
+<nav class="navbar navbar-expand-md fixed-top py-3 text-white"
+     style="background: rgb(33, 37, 41); width: 100%;">
+
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png" alt="Code 4 Hood logo" style="max-width: 154px; height: auto;">
+
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center"
+           href="index.html">
+            <img
+                src="assets/img/code%204%20hood%20%20(1%20x%200.5%20in).png"
+                alt="Code 4 Hood logo"
+                style="max-width: 154px; height: auto;">
         </a>
 
-        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navcol-3"
-            aria-controls="navcol-3" aria-expanded="false" aria-label="Toggle navigation"
-            style="border-width: 1px; border-color: white;">
+        <!-- MOBILE MENU BUTTON -->
+        <button class="navbar-toggler text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navcol-3"
+                aria-controls="navcol-3"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                style="border-width: 1px; border-color: white;">
+
             <span class="navbar-toggler-icon text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="font-size: 30px;">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="1em"
+                     height="1em"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     style="font-size: 30px;">
                     <path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor"></path>
                     <path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor"></path>
                     <path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor"></path>
@@ -19,80 +41,269 @@
             </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navcol-3" style="font-size: 18px;">
+        <!-- NAVIGATION LINKS -->
+        <div class="collapse navbar-collapse"
+             id="navcol-3"
+             style="font-size: 18px;">
+
             <ul class="navbar-nav mx-auto">
+
+                <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html">Home</a>
+                    <a class="nav-link text-white"
+                       href="index.html">
+                        Home
+                    </a>
                 </li>
 
+                <!-- ABOUT -->
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="dropdown-toggle nav-link text-white"
+                       href="#"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         About
                     </a>
+
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="executive-board.html">Executive Board</a>
-                        <a class="dropdown-item" href="leadership-team.html">Leadership Team</a>
-                        <a class="dropdown-item" href="impact-crew.html">Impact Crew</a>
+                        <a class="dropdown-item"
+                           href="executive-board.html">
+                            Executive Board
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="leadership-team.html">
+                            Leadership Team
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="impact-crew.html">
+                            Impact Crew
+                        </a>
                     </div>
                 </li>
 
+                <!-- IMPACT -->
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="impact-overview.html">Impact</a>
+                    <a class="nav-link text-white"
+                       href="impact-overview.html">
+                        Impact
+                    </a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- =========================
+                     PROGRAMS DROPDOWN
+                ========================== -->
+                <li class="nav-item dropdown programs-nav">
+
+                    <a class="dropdown-toggle nav-link text-white"
+                       href="#"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         Programs
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="steam-education.html">STEAM Education</a>
-                        <a class="dropdown-item" href="youth-workforce-career-pathways.html">Youth Workforce &amp; Career Pathways</a>
-                        <a class="dropdown-item" href="entrepreneurship-innovation.html">Entrepreneurship &amp; Innovation</a>
-                        <a class="dropdown-item" href="safe-spaces-for-youth.html">Safe Spaces</a>
-                        <a class="dropdown-item" href="youth-development.html">Youth Development</a>
-                    </div>
+
+                    <ul class="dropdown-menu programs-menu">
+
+                        <!-- PROGRAM 1 -->
+                        <li class="dropdown-submenu">
+
+                            <button class="dropdown-item submenu-toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                    aria-controls="steam-submenu">
+
+                                <span>
+                                    STEAM Studio &amp; Maker Space
+                                </span>
+
+                                <span class="submenu-arrow"
+                                      aria-hidden="true">
+                                    &#8250;
+                                </span>
+                            </button>
+
+                            <ul class="dropdown-menu submenu-menu"
+                                id="steam-submenu">
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="steam-education-innovation.html">
+                                        STEAM Education &amp; Innovation
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="youth-development-mentoring.html">
+                                        Youth Development &amp; Mentoring
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- PROGRAM 2 -->
+                        <li class="dropdown-submenu">
+
+                            <button class="dropdown-item submenu-toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                    aria-controls="collective-submenu">
+
+                                <span>
+                                    Youth Family and Community Collective
+                                </span>
+
+                                <span class="submenu-arrow"
+                                      aria-hidden="true">
+                                    &#8250;
+                                </span>
+                            </button>
+
+                            <ul class="dropdown-menu submenu-menu"
+                                id="collective-submenu">
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="afterschool-mentoring.html">
+                                       After-school Recreation &amp; STEAM Program
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="safe-spaces-for-youth.html">
+                                       Safe Spaces for Youth
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="youth-workforce-career-pathways.html">
+                                       Youth Workforce &amp; Career Pathways
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       href="prevention-innovation.html">
+                                       Prevention &amp; Innovation
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
                 </li>
 
+                <!-- SERVICES -->
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                        Services
+
+                    <a class="dropdown-toggle nav-link text-white"
+                       href="#"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Community Services
                     </a>
+
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="digital-resource-hub.html">Digital Resource Hub</a>
-                        <a class="dropdown-item" href="senior-job-training.html">Host Site Senior Job Training</a>
-                        <a class="dropdown-item" href="community-navigation-services.html">Community Navigation Services</a>
+
+                        <a class="dropdown-item"
+                           href="digital-resource-hub.html">
+                            Digital Resource Hub &amp; Computer Lab
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="senior-job-training.html">
+                           Workforce Development Host Site
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="community-navigation-services.html">
+                            Community Navigation Services
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="food-distribution-program.html">
+                           Food Distribution Program
+                        </a>
+
                     </div>
                 </li>
 
+                <!-- EVENTS -->
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <a class="dropdown-toggle nav-link text-white"
+                       href="#"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         Events
                     </a>
+
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="hack-the-hunt.html">Hack the Hunt</a>
-                        <a class="dropdown-item" href="sactown-youth-popups.html">SacTown Youth PopUps</a>
-                        <a class="dropdown-item" href="above-the-stem.html">Above the STEM</a>
-                        <a class="dropdown-item" href="bdog-trivia-night.html">BDOG Trivia Night</a>
+
+                        <a class="dropdown-item"
+                           href="hack-the-hunt.html">
+                            Hack the Hunt
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="sactown-youth-popups.html">
+                            SacTown Youth PopUps
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="above-the-stem.html">
+                            Above the STEM
+                        </a>
+
+                        <a class="dropdown-item"
+                           href="bdog-trivia-night.html">
+                            BDOG Trivia Night
+                        </a>
+
                     </div>
                 </li>
 
+                <!-- INITIATIVES -->
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="2026-2027-initiatives.html">2026-2027 Initiatives</a>
+                    <a class="nav-link text-white"
+                       href="2026-2027-initiatives.html">
+                        2026-2027 Initiatives
+                    </a>
                 </li>
 
+                <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                    <a class="nav-link text-white"
+                       href="contact.html">
+                        Contact
+                    </a>
                 </li>
+
             </ul>
 
-            <a href="ways-to-donate.html" class="btn btn-primary border-0 rounded-0 donate-btn" style="font-size: 17px; background-color: #79b104; color: white;">
+            <!-- DONATE BUTTON -->
+            <a href="ways-to-donate.html"
+               class="btn btn-primary border-0 rounded-0 donate-btn"
+               style="font-size: 17px; background-color: #79b104; color: white;">
                 Donate
             </a>
+
         </div>
     </div>
 </nav>
 
+<!-- =========================
+     NAVBAR STYLING
+========================== -->
 <style>
+
+    /* EXISTING ACTIVE LINKS */
+
     .navbar-nav .nav-link.active {
         color: #79b104 !important;
     }
@@ -107,61 +318,414 @@
         border-color: #79b104 !important;
         color: white !important;
     }
+
+    /* PROGRAMS MAIN DROPDOWN */
+
+    .programs-nav,
+    .programs-menu,
+    .programs-menu .dropdown-submenu {
+        overflow: visible !important;
+    }
+
+    .programs-menu {
+        min-width: 360px;
+        padding: 8px 0;
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .programs-menu .dropdown-submenu {
+        position: relative;
+    }
+
+    /* MAIN PROGRAM ITEMS */
+
+    .programs-menu .submenu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        width: 100%;
+        padding: 11px 16px;
+        border: none;
+        background: transparent;
+        color: #212529;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        white-space: normal;
+        cursor: pointer;
+    }
+
+    .programs-menu .submenu-toggle:hover,
+    .programs-menu .submenu-toggle:focus,
+    .programs-menu .dropdown-submenu.show > .submenu-toggle {
+        background-color: #f3f8eb;
+        color: #628f03;
+    }
+
+    .programs-menu .submenu-arrow {
+        color: #79b104;
+        font-size: 25px;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    /* SECOND LEVEL DROPDOWNS */
+
+    .programs-menu .dropdown-submenu > .submenu-menu {
+        display: none;
+        position: absolute;
+        top: -8px;
+        left: 100%;
+        min-width: 310px;
+        margin: 0;
+        padding: 8px 0;
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        z-index: 1100;
+    }
+
+    /* FORCE NESTED MENU TO DISPLAY WHEN OPEN */
+
+    .programs-menu .dropdown-submenu.show > .submenu-menu {
+        display: block !important;
+    }
+
+    /* HOVER SUPPORT ON DESKTOP */
+
+    @media (min-width: 1200px) {
+        .programs-menu .dropdown-submenu:hover > .submenu-menu {
+            display: block !important;
+        }
+
+        .programs-menu .dropdown-submenu:hover > .submenu-toggle {
+            background-color: #f3f8eb;
+            color: #628f03;
+        }
+    }
+
+    /* SUBMENU LINKS */
+
+    .programs-menu .submenu-menu .dropdown-item {
+        display: block;
+        padding: 11px 16px;
+        color: #212529;
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: normal;
+    }
+
+    .programs-menu .submenu-menu .dropdown-item:hover,
+    .programs-menu .submenu-menu .dropdown-item:focus {
+        background-color: #f3f8eb;
+        color: #628f03;
+    }
+
+    .programs-menu .dropdown-submenu.has-active > .submenu-toggle {
+        color: #79b104;
+        font-weight: 600;
+    }
+
+    /* TABLET AND MOBILE */
+
+    @media (max-width: 1199px) {
+
+        .programs-menu .dropdown-submenu > .submenu-menu {
+            position: static;
+            top: auto;
+            left: auto;
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0 0 5px 14px;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            background: #f8f9fa;
+        }
+
+        .programs-menu .submenu-arrow {
+            transform: rotate(90deg);
+        }
+
+        .programs-menu .dropdown-submenu.show > .submenu-toggle
+        .submenu-arrow {
+            transform: rotate(-90deg);
+        }
+
+    }
+
+    @media (max-width: 767px) {
+
+        .programs-menu {
+            min-width: 0;
+            width: 100%;
+            box-shadow: none;
+        }
+
+        .programs-menu .submenu-toggle {
+            font-size: 15px;
+        }
+
+        .programs-menu .submenu-menu .dropdown-item {
+            font-size: 14px;
+        }
+
+    }
+
 </style>
 
+<!-- =========================
+     NAVIGATION JAVASCRIPT
+========================== -->
 <script>
+
+(function () {
+
     function setActiveLink() {
-        // Get the current page filename
+
         let currentPage = window.location.pathname.split('/').pop();
-        if (!currentPage || currentPage === '') {
+
+        if (!currentPage) {
             currentPage = 'index.html';
         }
 
-        // Get all nav links (both regular and dropdowns)
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const navLinks = document.querySelectorAll(
+            '.navbar-nav .nav-link'
+        );
+
+        const dropdownItems = document.querySelectorAll(
+            '.dropdown-item[href]'
+        );
+
         const donateBtn = document.querySelector('.donate-btn');
 
-        // Check regular nav links
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPage) {
+
+            link.classList.remove('active');
+
+            if (link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             }
+
         });
 
-        // Check dropdown items
         dropdownItems.forEach(item => {
-            const href = item.getAttribute('href');
-            if (href === currentPage) {
+
+            item.classList.remove('active');
+
+            if (item.getAttribute('href') === currentPage) {
+
                 item.classList.add('active');
-                // Also highlight the parent dropdown toggle
-                const parentDropdown = item.closest('.dropdown');
+
+                const parentDropdown = item.closest(
+                    '.nav-item.dropdown'
+                );
+
                 if (parentDropdown) {
-                    const parentToggle = parentDropdown.querySelector('.dropdown-toggle');
+
+                    const parentToggle = parentDropdown.querySelector(
+                        ':scope > .dropdown-toggle'
+                    );
+
                     if (parentToggle) {
                         parentToggle.classList.add('active');
                     }
+
                 }
+
+                const submenu = item.closest('.dropdown-submenu');
+
+                if (submenu) {
+                    submenu.classList.add('has-active');
+                }
+
             }
+
         });
 
-        // Check donate button
         if (donateBtn) {
-            const href = donateBtn.getAttribute('href');
-            if (href === currentPage) {
+
+            donateBtn.classList.remove('active');
+
+            if (donateBtn.getAttribute('href') === currentPage) {
                 donateBtn.classList.add('active');
             }
+
         }
+
     }
 
-    // Run on page load
-    document.addEventListener('DOMContentLoaded', setActiveLink);
+    function initializeProgramSubmenus() {
 
-    // Also run immediately in case DOM is already loaded
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setActiveLink);
-    } else {
+        const programMenu = document.querySelector('.programs-menu');
+
+        if (!programMenu) {
+            return;
+        }
+
+        const submenuItems = programMenu.querySelectorAll(
+            '.dropdown-submenu'
+        );
+
+        function closeSubmenus() {
+
+            submenuItems.forEach(item => {
+
+                item.classList.remove('show');
+
+                const toggle = item.querySelector(
+                    ':scope > .submenu-toggle'
+                );
+
+                if (toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+
+            });
+
+        }
+
+        submenuItems.forEach(item => {
+
+            const toggle = item.querySelector(
+                ':scope > .submenu-toggle'
+            );
+
+            if (!toggle) {
+                return;
+            }
+
+            /* CLICK TO OPEN */
+
+            toggle.addEventListener('click', function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                const wasOpen = item.classList.contains('show');
+
+                closeSubmenus();
+
+                if (!wasOpen) {
+                    item.classList.add('show');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+
+            });
+
+            /* KEYBOARD SUPPORT */
+
+            toggle.addEventListener('keydown', function (event) {
+
+                if (event.key === 'Escape') {
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    closeSubmenus();
+                    toggle.focus();
+
+                }
+
+            });
+
+            /* HOVER SUPPORT ON DESKTOP */
+
+            item.addEventListener('mouseenter', function () {
+
+                if (window.innerWidth >= 1200) {
+
+                    closeSubmenus();
+
+                    item.classList.add('show');
+
+                    toggle.setAttribute('aria-expanded', 'true');
+
+                }
+
+            });
+
+            item.addEventListener('mouseleave', function () {
+
+                if (window.innerWidth >= 1200) {
+
+                    item.classList.remove('show');
+
+                    toggle.setAttribute('aria-expanded', 'false');
+
+                }
+
+            });
+
+        });
+
+        /* KEEP CLICKS INSIDE SUBMENU FROM
+           CLOSING PARENT DROPDOWN */
+
+        programMenu.addEventListener('click', function (event) {
+
+            if (event.target.closest('.submenu-toggle')) {
+                event.stopPropagation();
+            }
+
+        });
+
+        /* CLOSE NESTED MENUS WHEN
+           MAIN PROGRAMS MENU CLOSES */
+
+        const programsDropdown = programMenu.closest('.dropdown');
+
+        if (programsDropdown) {
+
+            programsDropdown.addEventListener(
+                'hidden.bs.dropdown',
+                function () {
+                    closeSubmenus();
+                }
+            );
+
+        }
+
+        /* CLOSE ON ESCAPE */
+
+        document.addEventListener('keydown', function (event) {
+
+            if (event.key === 'Escape') {
+                closeSubmenus();
+            }
+
+        });
+
+    }
+
+    function initializeNavbar() {
+
         setActiveLink();
+        initializeProgramSubmenus();
+
     }
+
+    if (document.readyState === 'loading') {
+
+        document.addEventListener(
+            'DOMContentLoaded',
+            initializeNavbar
+        );
+
+    } else {
+
+        initializeNavbar();
+
+    }
+
+})();
+
 </script>
