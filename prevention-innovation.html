@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light" style="font-family:Kanit, sans-serif;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Prevention &amp; Intervention | Code4Hood</title>
+    <meta name="description" content="Explore Code 4 Hood's Prevention and Intervention programs supporting youth through mentoring, reentry, violence prevention, and community engagement.">
+
+    <link rel="icon" type="image/png"
+          href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --bs-primary: #79b104;
+            --bs-primary-rgb: 121, 177, 4;
+        }
+
+        body {
+            font-family: Kanit, sans-serif;
+            background: #ffffff;
+        }
+
+        .prevention-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border-left: 5px solid #79b104;
+            padding: 35px;
+            height: 100%;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .prevention-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09) !important;
+        }
+
+        .prevention-card h3 {
+            color: #1f1f1f;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .prevention-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 0;
+        }
+
+        .newsletter-section {
+            background: #79b104;
+            padding: 20px 15px;
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+            .prevention-card {
+                padding: 24px;
+            }
+
+            .prevention-card h3 {
+                font-size: 22px;
+            }
+
+            .prevention-card p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     SHARED NAVBAR
+========================= -->
+
+<div id="navbar"></div>
+
+<script>
+    function setActiveLink() {
+        let currentPage = window.location.pathname.split('/').pop();
+
+        if (!currentPage) {
+            currentPage = 'index.html';
+        }
+
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+
+                const parentDropdown = item.closest('.nav-item.dropdown');
+
+                if (parentDropdown) {
+                    const toggle = parentDropdown.querySelector('.dropdown-toggle');
+                    if (toggle) {
+                        toggle.classList.add('active');
+                    }
+                }
+            }
+        });
+    }
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            setActiveLink();
+        });
+</script>
+
+<!-- Navbar spacing -->
+<div style="height:70px;"></div>
+
+
+<!-- =========================
+     PREVENTION & INTERVENTION
+========================= -->
+
+<section class="py-5 bg-white" id="prevention-intervention">
+
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+
+        <div class="text-center mb-5"
+             data-aos="fade-up"
+             data-aos-duration="800">
+
+            <h2 class="fw-bold mb-3"
+                style="color:#1f1f1f;font-size:2.2rem;">
+                Prevention &amp; Intervention
+            </h2>
+
+            <div style="
+                width:90px;
+                height:4px;
+                background:#79b104;
+                margin:14px auto 20px auto;">
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             1. THE BLUEPRINT
+        ========================= -->
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-11"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="prevention-card shadow-sm">
+
+                    <h3>The Blueprint</h3>
+
+                    <p>
+                        Blueprint is Code 4 Hood’s 16-week program for
+                        justice-involved youth and young people in transition,
+                        designed to help them leave with a real plan for what
+                        comes next. Through weekly 90-minute sessions,
+                        participants build job readiness skills, learn to
+                        manage money, and practice the life skills it takes
+                        to live independently. Each young person completes
+                        a capstone reentry plan and earns a stipend for
+                        finishing the program. Code 4 Hood then stays
+                        alongside them, coordinating with probation officers
+                        and partners as they transition home, so no one
+                        starts their next chapter alone.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =========================
+             2. THE FIRST 90 DAYS
+        ========================= -->
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-11"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="prevention-card shadow-sm">
+
+                    <h3>The First 90 Days</h3>
+
+                    <p>
+                        First 90 Days is Code 4 Hood’s reentry program for
+                        justice-involved youth, built to meet young people
+                        on the day they’re released from custody and walk
+                        with them through their first 90 days home.
+                        Each participant is paired with a credible mentor
+                        with lived experience who understands the road ahead.
+                        Together with Code 4 Hood’s team, participants get
+                        help with job placement, housing through connections
+                        to transitional housing, and wraparound services
+                        such as IDs, benefits, transportation, and health
+                        care. Those first three months set the foundation
+                        for everything that follows, and First 90 Days
+                        makes sure no young person faces them alone.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =========================
+             3. PATHWAYS TO SUCCESS
+        ========================= -->
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-11"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="prevention-card shadow-sm">
+
+                    <h3>Pathways to Success</h3>
+
+                    <p>
+                        Pathways to Success is Code 4 Hood’s violence
+                        prevention program for youth ages 10 to 19,
+                        funded by the City of Sacramento’s Children’s Fund.
+                        Based at our Oak Park Studio at 4625 44th Street,
+                        the program gives young people a safe, consistent
+                        place to grow, with classes, workshops, mentoring,
+                        and life coaching alongside supportive services
+                        that help them and their families thrive.
+                        Participants build the skills, relationships,
+                        and confidence to make positive choices and
+                        plan for their future.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+        
+<!-- =========================
+     4. WEST SACRAMENTO FUTURES
+========================= -->
+
+<div class="row justify-content-center mb-5">
+    <div class="col-lg-11"
+         data-aos="fade-up"
+         data-aos-duration="900">
+
+        <div class="prevention-card shadow-sm">
+
+            <h3>West Sacramento Futures</h3>
+
+            <p class="mb-3">
+                Futures: West Sacramento is a youth violence prevention
+                and intervention initiative that empowers young people
+                to become leaders, strengthen their connection to their
+                community, and help create safer environments for
+                themselves and their peers.
+            </p>
+
+            <p class="mb-3">
+                Through mentorship, leadership development, workshops,
+                peer engagement, and community-based activities, youth
+                build skills in
+                <strong>conflict resolution, healthy decision-making,
+                communication, violence prevention, and community
+                leadership</strong>
+                while exploring their personal, educational, and
+                career goals.
+            </p>
+
+            <p class="mb-3">
+                In partnership with the
+                <strong>City of West Sacramento</strong>,
+                Futures creates a Community of Practice where youth
+                voice and lived experience help shape solutions,
+                strengthen community connections, and promote
+                positive change.
+            </p>
+
+            <p class="mb-0">
+                <strong>
+                    Futures gives young people a seat at the table
+                    and the tools to help build safer, stronger
+                    communities while creating a positive vision
+                    for their own future.
+                </strong>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- =========================
+             5. SACTOWN YOUTH POP-UPS
+        ========================= -->
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-11"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="prevention-card shadow-sm">
+
+                    <h3>SacTown Youth Pop-Ups</h3>
+
+                    <p>
+                        SacTown Youth Pop-Ups is Code 4 Hood’s violence
+                        prevention events series, planned and hosted by
+                        our adult mentors alongside the Impact Crew,
+                        our youth leadership team. Once or twice a month,
+                        usually on a Friday or Saturday, we bring young
+                        people together for safe, positive experiences
+                        like game nights, dinner and movie nights, and
+                        trips to Sacramento Kings games. Events take
+                        place across Sacramento County, with a focus on
+                        South Sacramento and Oak Park, and are free for
+                        youth ages 12 to 19. Every pop-up is a chance
+                        to have fun, connect with caring mentors,
+                        and build community.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER SECTION
+========================= -->
+
+<section style="padding:0 0 80px 0;background:#ffffff;">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10 fade-up-section">
+
+                <div class="newsletter-section text-center">
+
+                    <div style="
+                        position:relative;
+                        width:100%;
+                        min-height:300px;
+                        margin-top:20px;
+                        overflow:hidden;">
+
+                        <iframe
+                            title="Signup form powered by Zeffy"
+                            style="
+                                position:absolute;
+                                border:0;
+                                top:0;
+                                left:0;
+                                width:100%;
+                                height:100%;"
+                            src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-3240"
+                            allowTransparency="true">
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SHARED FOOTER
+========================= -->
+
+<div id="footer-placeholder"></div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.min.js"></script>
+<script src="assets/js/components.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+    });
+</script>
+
+</body>
+</html>

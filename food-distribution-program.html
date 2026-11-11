@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Community Food Collective | Code4Hood</title>
+
+    <meta name="description"
+          content="Code 4 Hood Community Food Collective offers free food distribution in Sacramento in partnership with Sacramento Food Bank & Family Services.">
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
+    <link rel="stylesheet"
+          href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+
+    <link rel="stylesheet"
+          href="assets/css/global.css">
+
+    <link rel="stylesheet"
+          href="assets/css/css/aos.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+
+        :root {
+            --bs-primary: #79b104;
+            --bs-primary-rgb: 121, 177, 4;
+        }
+
+        body {
+            font-family: Kanit, sans-serif;
+            background: #ffffff;
+        }
+
+        /* PAGE HEADING */
+
+        .section-heading {
+            color: #1f1f1f;
+            font-size: 2.2rem;
+        }
+
+        .heading-underline {
+            width: 90px;
+            height: 4px;
+            background: #79b104;
+            margin: 14px auto 20px auto;
+        }
+
+        /* PROGRAM CARDS */
+
+        .food-program-card {
+            background: linear-gradient(
+                135deg,
+                #f8fbff 0%,
+                #ffffff 100%
+            );
+
+            border-left: 5px solid #79b104;
+            padding: 35px;
+            border-radius: 16px;
+            height: 100%;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .food-program-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.09) !important;
+        }
+
+        .food-program-card h3 {
+            color: #1f1f1f;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .food-program-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        /* STATUS LABELS */
+
+        .status-active {
+            display: inline-block;
+            background: #e8f4d5;
+            color: #426600;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .status-coming {
+            display: inline-block;
+            background: #f1f1f1;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* CONTACT SECTION */
+
+        .food-contact-section {
+            background: #79b104;
+            color: #ffffff;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        .food-contact-section h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .food-contact-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto 25px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #222;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 13px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #111;
+            color: #ffffff;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 767px) {
+
+            .section-heading {
+                font-size: 1.8rem;
+            }
+
+            .food-program-card {
+                padding: 24px;
+            }
+
+            .food-program-card h3 {
+                font-size: 21px;
+            }
+
+            .food-contact-section {
+                padding: 35px 20px;
+            }
+
+            .food-contact-section h3 {
+                font-size: 23px;
+            }
+
+            .food-contact-section p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- =========================
+     SHARED NAVBAR
+========================= -->
+
+<div id="navbar"></div>
+
+<script>
+
+    function setActiveLink() {
+
+        let currentPage =
+            window.location.pathname.split('/').pop();
+
+        if (!currentPage) {
+            currentPage = 'index.html';
+        }
+
+        document.querySelectorAll(
+            '.navbar-nav .nav-link'
+        ).forEach(link => {
+
+            if (
+                link.getAttribute('href') === currentPage
+            ) {
+                link.classList.add('active');
+            }
+
+        });
+
+        document.querySelectorAll(
+            '.dropdown-item'
+        ).forEach(item => {
+
+            if (
+                item.getAttribute('href') === currentPage
+            ) {
+
+                item.classList.add('active');
+
+                const parentDropdown =
+                    item.closest('.dropdown');
+
+                if (parentDropdown) {
+
+                    const toggle =
+                        parentDropdown.querySelector(
+                            '.dropdown-toggle'
+                        );
+
+                    if (toggle) {
+                        toggle.classList.add('active');
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+
+            document.getElementById('navbar').innerHTML = data;
+
+            setActiveLink();
+
+        });
+
+</script>
+
+
+<!-- NAVBAR SPACING -->
+
+<div style="height:70px;"></div>
+
+
+<!-- =========================
+     COMMUNITY FOOD COLLECTIVE
+========================= -->
+
+<section class="py-5 bg-white"
+         id="community-food-collective">
+
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+
+        <div class="text-center mb-5"
+             data-aos="fade-up"
+             data-aos-duration="800">
+
+            <h2 class="fw-bold section-heading">
+                Community Food Collective
+            </h2>
+
+            <div class="heading-underline"></div>
+
+        </div>
+
+
+        <!-- =========================
+             FOOD PROGRAM CARDS
+        ========================= -->
+
+        <div class="row g-4 justify-content-center mb-5">
+
+
+            <!-- FREE FOOD DISTRIBUTION -->
+
+            <div class="col-12 col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="food-program-card shadow-sm">
+
+                    <span class="status-active">
+                        Free Food Distribution
+                    </span>
+
+                    <h3>
+                        Free Food Distribution
+                    </h3>
+
+                    <p class="mb-3">
+                        In partnership with
+                        <strong>Sacramento Food Bank &amp; Family Services</strong>,
+                        Code 4 Hood hosts a free food distribution
+                        on the <strong>2nd and 4th Friday of every month</strong>,
+                        from <strong>11 a.m. to 1 p.m.</strong>,
+                        at 7851 35th Avenue, Sacramento, CA 95824.
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="bi bi-calendar-event me-2"
+                           style="color:#79b104;"></i>
+
+                        2nd and 4th Friday of every month
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="bi bi-clock me-2"
+                           style="color:#79b104;"></i>
+
+                        11 a.m. to 1 p.m.
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="bi bi-geo-alt-fill me-2"
+                           style="color:#79b104;"></i>
+
+                        7851 35th Avenue<br>
+                        Sacramento, CA 95824
+                    </p>
+
+                    <p class="mb-0">
+                        For more information, email us at
+                        <a href="mailto:hello@code4hood.org"
+                           style="color:#79b104;font-weight:600;">
+                            hello@code4hood.org
+                        </a>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD GROWING COLLECTIVE -->
+
+            <div class="col-12 col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="food-program-card shadow-sm">
+
+                    <span class="status-coming">
+                        Coming Soon
+                    </span>
+
+                    <h3>
+                        Food Growing Collective
+                    </h3>
+
+                    <p class="mb-0">
+                        Coming soon.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section style="
+    padding:0 0 80px 0;
+    background:#ffffff;
+">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="food-contact-section">
+
+                    <h3>
+                        Have Questions About Food Distribution?
+                    </h3>
+
+                    <p>
+                        Contact Code 4 Hood for more information
+                        about our Community Food Collective
+                        and free food distribution program.
+                    </p>
+
+                   
+<a
+href="contact.html"
+class="contact-btn"
+>
+<i class="bi bi-envelope-fill me-2"></i>
+Contact Us
+</a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SHARED FOOTER
+========================= -->
+
+<div id="footer-placeholder"></div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.min.js"></script>
+<script src="assets/js/components.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+    });
+
+</script>
+
+</body>
+</html>

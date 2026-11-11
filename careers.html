@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Careers | Code4Hood</title>
+
+    <meta name="description"
+          content="Join the Code 4 Hood team. Explore part-time STEM Instructor and STEAM Classroom Assistant opportunities in Sacramento.">
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/img/code%204%20hood%20%20(3.5%20x%201.5%20in).png">
+
+    <link rel="stylesheet"
+          href="assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+
+    <link rel="stylesheet"
+          href="assets/css/global.css">
+
+    <link rel="stylesheet"
+          href="assets/css/css/aos.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --bs-primary: #79b104;
+            --bs-primary-rgb: 121, 177, 4;
+        }
+
+        body {
+            font-family: Kanit, sans-serif;
+            background: #ffffff;
+        }
+
+        /* PAGE HEADING */
+
+        .section-heading {
+            color: #1f1f1f;
+            font-size: 2.2rem;
+        }
+
+        .heading-underline {
+            width: 90px;
+            height: 4px;
+            background: #79b104;
+            margin: 14px auto 20px;
+        }
+
+        /* JOB CARDS */
+
+        .career-card {
+            background: linear-gradient(
+                135deg,
+                #f8fbff 0%,
+                #ffffff 100%
+            );
+            border-left: 5px solid #79b104;
+            padding: 35px;
+            border-radius: 16px;
+            height: 100%;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.09) !important;
+        }
+
+        .career-card h3 {
+            color: #1f1f1f;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .career-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .career-pay {
+            display: inline-block;
+            background: #e8f4d5;
+            color: #426600;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 9px 18px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+
+        .career-type {
+            display: inline-block;
+            background: #f1f1f1;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 7px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* APPLY ON INDEED BUTTONS */
+
+        .apply-btn {
+            display: inline-block;
+            background: #79b104;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 13px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 2px solid #79b104;
+            transition: background 0.3s ease,
+                        color 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background: #659603;
+            border-color: #659603;
+            color: #ffffff;
+        }
+
+        .apply-btn:focus-visible {
+            outline: 3px solid #222;
+            outline-offset: 3px;
+        }
+
+        /* REQUIREMENTS */
+
+        .requirements-card {
+            background: #f8f9fa;
+            border-left: 5px solid #79b104;
+            padding: 35px;
+            border-radius: 16px;
+        }
+
+        .requirements-card h3 {
+            color: #1f1f1f;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .requirements-card ul {
+            color: #555;
+            font-size: 16px;
+            line-height: 2;
+            margin-bottom: 0;
+        }
+
+        /* ACCOMMODATION SECTION */
+
+        .career-contact-section {
+            background: #79b104;
+            color: #ffffff;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        .career-contact-section h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .career-contact-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto 25px;
+        }
+
+        .career-contact-section a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .career-contact-section a:hover {
+            color: #222;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 767px) {
+            .section-heading {
+                font-size: 1.8rem;
+            }
+
+            .career-card,
+            .requirements-card {
+                padding: 24px;
+            }
+
+            .career-card h3 {
+                font-size: 22px;
+            }
+
+            .career-card p,
+            .requirements-card ul {
+                font-size: 15px;
+            }
+
+            .career-contact-section {
+                padding: 35px 20px;
+            }
+
+            .career-contact-section h3 {
+                font-size: 23px;
+            }
+
+            .career-contact-section p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     SHARED NAVBAR
+========================= -->
+
+<div id="navbar"></div>
+
+<script>
+    function setActiveLink() {
+        let currentPage = window.location.pathname.split('/').pop();
+
+        if (!currentPage) {
+            currentPage = 'index.html';
+        }
+
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+
+                const parentDropdown = item.closest('.dropdown');
+
+                if (parentDropdown) {
+                    const toggle = parentDropdown.querySelector('.dropdown-toggle');
+                    if (toggle) {
+                        toggle.classList.add('active');
+                    }
+                }
+            }
+        });
+    }
+
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            setActiveLink();
+        });
+</script>
+
+<!-- NAVBAR SPACING -->
+
+<div style="height:70px;"></div>
+
+
+<!-- =========================
+     CAREERS PAGE
+========================= -->
+
+<section class="py-5 bg-white" id="careers">
+
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+
+        <div class="text-center mb-5"
+             data-aos="fade-up"
+             data-aos-duration="800">
+
+            <h2 class="fw-bold section-heading">
+                Careers
+            </h2>
+
+            <div class="heading-underline"></div>
+
+            <p class="mx-auto mb-0"
+               style="
+                   max-width:850px;
+                   color:#79b104;
+                   font-size:1.15rem;
+                   font-weight:700;
+                   line-height:1.7;
+               ">
+                Join Our Team
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             JOB OPPORTUNITIES
+        ========================= -->
+
+        <div class="row g-4 justify-content-center mb-5">
+
+
+            <!-- STEM INSTRUCTOR -->
+
+            <div class="col-12 col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="career-card shadow-sm d-flex flex-column">
+
+                    <span class="career-type align-self-start">
+                        Part-Time
+                    </span>
+
+                    <h3>
+                        STEM Instructor
+                    </h3>
+
+                    <div>
+                        <span class="career-pay">
+                            $50/hour or $100 per 2-hour class
+                        </span>
+                    </div>
+
+                    <p>
+                        Code 4 Hood is looking for an energetic,
+                        dependable STEM Instructor to lead hands-on
+                        after-school classes in coding, robotics,
+                        and game development for elementary and
+                        middle school students.
+                    </p>
+
+                    <p>
+                        You’ll teach from our curriculum, guide
+                        students as they build, code, and troubleshoot
+                        their projects, and manage a class of up
+                        to 20 students.
+                    </p>
+
+                    <p>
+                        Classes run after school, generally between
+                        <strong>3:00 and 5:30 p.m.</strong>,
+                        about <strong>2–3 days a week</strong>
+                        at Sacramento-area school and community sites.
+                    </p>
+
+                    <p>
+                        You don’t need to know every platform we use.
+                        A strong STEM foundation, experience working
+                        with youth, and a willingness to learn are
+                        what matter most.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Paid training and a monthly phone
+                            stipend are included.
+                        </strong>
+                    </p>
+
+                    <div class="mt-auto pt-3">
+
+                        <!--
+                            TODO:
+                            Replace # with the STEM Instructor
+                            Indeed application URL from AJ.
+                        -->
+
+                        <a
+                            href="#"
+                            class="apply-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            Apply on Indeed
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEAM CLASSROOM ASSISTANT -->
+
+            <div class="col-12 col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="career-card shadow-sm d-flex flex-column">
+
+                    <span class="career-type align-self-start">
+                        Part-Time
+                    </span>
+
+                    <h3>
+                        STEAM Classroom Assistant
+                    </h3>
+
+                    <div>
+                        <span class="career-pay">
+                            $25.00/hour
+                        </span>
+                    </div>
+
+                    <p>
+                        Our STEAM Classroom Assistants support
+                        instructors in after-school classes for
+                        elementary and middle school students.
+                    </p>
+
+                    <p>
+                        You’ll help set up and put away materials,
+                        work one-on-one with students on their
+                        projects, and help keep the classroom
+                        positive, safe, and focused.
+                    </p>
+
+                    <p>
+                        This is a great fit for college students,
+                        aspiring educators, and anyone who enjoys
+                        technology and working with young people.
+                    </p>
+
+                    <p>
+                        <strong>
+                            No teaching experience required,
+                            and training is provided.
+                        </strong>
+                    </p>
+
+                    <div class="mt-auto pt-3">
+
+                        <!--
+                            TODO:
+                            Replace # with the STEAM Classroom
+                            Assistant Indeed application URL from AJ.
+                        -->
+
+                        <a
+                            href="#"
+                            class="apply-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            Apply on Indeed
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             REQUIREMENTS
+        ========================= -->
+
+        <div class="row justify-content-center mb-5">
+
+            <div class="col-lg-10"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="requirements-card shadow-sm">
+
+                    <h3>
+                        Requirements for Both Roles
+                    </h3>
+
+                    <ul>
+                        <li>Experience working with youth</li>
+                        <li>Reliable transportation</li>
+                        <li>
+                            Completion of required clearances
+                            before starting, including:
+                            <ul>
+                                <li>Live Scan background check</li>
+                                <li>TB clearance</li>
+                                <li>Mandated reporter training</li>
+                                <li>CPR/First Aid</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     APPLICATION ACCOMMODATIONS
+========================= -->
+
+<section style="padding:0 0 80px 0;background:#ffffff;">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10"
+                 data-aos="fade-up"
+                 data-aos-duration="900">
+
+                <div class="career-contact-section">
+
+                    <h3>
+                        Application Accommodations
+                    </h3>
+
+                    <p class="mb-0">
+                        To request an accommodation in the
+                        application process, contact
+                        <a href="mailto:hello@code4hood.org">
+                            hello@code4hood.org
+                        </a>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SHARED FOOTER
+========================= -->
+
+<div id="footer-placeholder"></div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.min.js"></script>
+<script src="assets/js/components.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+    });
+</script>
+
+</body>
+</html>

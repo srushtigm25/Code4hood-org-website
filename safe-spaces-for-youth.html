@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en" data-bss-forced-theme="light" style="font-family:Kanit, sans-serif;">
 
@@ -16,17 +17,8 @@
     >
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap"
-    >
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+13px&amp;display=swap">
     <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/css/Lightbox-Gallery-baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/css/Navbar-Centered-Links-icons.css">
@@ -102,10 +94,73 @@
             transform: scale(1.2);
         }
 
+        /* Youth referral call-to-action */
+
+        .youth-referral-section {
+            background: #79b104;
+            padding: 45px 25px;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 0;
+        }
+
+        .youth-referral-section h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .youth-referral-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto 25px;
+            color: #ffffff;
+        }
+
+        .youth-referral-btn {
+            display: inline-block;
+            background: #222;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 13px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: none;
+            transition: background 0.3s ease;
+        }
+
+        .youth-referral-btn:hover {
+            background: #111;
+            color: #ffffff;
+        }
+
+        .youth-referral-btn:disabled {
+            background: #333;
+            color: #ffffff;
+            opacity: 0.8;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 767px) {
+            .youth-referral-section {
+                padding: 35px 20px;
+            }
+
+            .youth-referral-section h3 {
+                font-size: 23px;
+            }
+
+            .youth-referral-section p {
+                font-size: 15px;
+            }
+        }
+
     </style>
 
 </head>
-
 
 <body
     style="
@@ -115,7 +170,6 @@
         background:white;
     "
 >
-
 
 <!-- =========================
      NAVBAR
@@ -185,7 +239,6 @@
 <section class="py-5 bg-white" id="safe-spaces-program">
 
     <div class="container">
-
 
         <!-- Page Header -->
 
@@ -715,7 +768,8 @@
 
 
 <!-- =========================
-     NEWSLETTER SECTION
+     YOUTH REFERRAL SECTION
+     Replaces newsletter signup
 ========================= -->
 
 <section
@@ -731,36 +785,55 @@
 
             <div class="col-lg-10 fade-up-section">
 
-                <div class="newsletter-section text-center">
+                <div class="youth-referral-section">
 
-                    <div
+                    <h3>
+                        Get Started with Referring a Youth Today
+                    </h3>
+
+                    <p>
+                        Help connect a young person with the support,
+                        resources, and opportunities they need.
+                        Start a referral to the Code 4 Hood Safe Spaces
+                        Program today.
+                    </p>
+
+                    <!--
+                        GOOGLE INTAKE FORM PLACEHOLDER
+
+                        Once the Google Form link is available,
+                        replace the disabled button below with:
+
+                        <a
+                            href="PASTE_GOOGLE_INTAKE_FORM_URL_HERE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="youth-referral-btn"
+                        >
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            Refer a Youth
+                        </a>
+                    -->
+
+                    <button
+                        type="button"
+                        class="youth-referral-btn"
+                        disabled
+                    >
+                        <i class="bi bi-person-plus-fill me-2"></i>
+                        Refer a Youth
+                    </button>
+
+                    <p
                         style="
-                            position:relative;
-                            width:100%;
-                            min-height:300px;
-                            margin-top:20px;
-                            overflow:hidden;
+                            font-size:13px;
+                            margin-top:15px;
+                            margin-bottom:0;
+                            opacity:0.9;
                         "
                     >
-
-                        <iframe
-                            title="Signup form powered by Zeffy"
-                            style="
-                                position:absolute;
-                                border:0;
-                                top:0;
-                                left:0;
-                                right:0;
-                                bottom:0;
-                                width:100%;
-                                height:100%;
-                            "
-                            src="https://www.zeffy.com/en-US/embed/newsletter-form/sign-up-for-our-newsletter-3240"
-                            allowTransparency="true"
-                        >
-                        </iframe>
-
-                    </div>
+                        <!-- Form Link Coming Soon -->
+                    </p>
 
                 </div>
 

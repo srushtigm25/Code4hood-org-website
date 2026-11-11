@@ -138,6 +138,155 @@
             opacity: 0;
             transition-property: transform, opacity;
         }
+
+
+/* =========================
+   OFFICE LOCATIONS
+========================== */
+
+.office-locations {
+    margin-top: 30px;
+}
+
+.office-location-card {
+    background-color: #30363b;
+    border-left: 4px solid #79b104;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.office-location-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.location-icon {
+    color: #a7d55a;
+    font-size: 22px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.location-title {
+    color: #a7d55a;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.location-address {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.location-note {
+    color: #d1d5db;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   OFFICE LOCATIONS - COMPACT
+========================== */
+
+.office-locations {
+    margin-top: 15px !important;
+}
+
+.office-locations h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px !important;
+}
+
+.office-locations > p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px !important;
+}
+
+/* LOCATION CARDS */
+
+.office-location-card {
+    background-color: #30363b;
+    border-left: 3px solid #79b104;
+    border-radius: 6px;
+    padding: 11px 14px;
+    margin-bottom: 8px !important;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.office-location-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* LOCATION ICON */
+
+.location-icon {
+    color: #a7d55a;
+    font-size: 17px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* LOCATION NAME */
+
+.location-title {
+    color: #a7d55a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 4px;
+}
+
+/* ADDRESS */
+
+.location-address {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* ADDITIONAL LOCATION NOTE */
+
+.location-note {
+    color: #d1d5db;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 3px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 767px) {
+
+    .office-location-card {
+        padding: 12px;
+    }
+
+    .location-title {
+        font-size: 14px;
+    }
+
+    .location-address {
+        font-size: 13px;
+    }
+
+    .location-icon {
+        font-size: 17px;
+    }
+
+}
+
+
     </style>
 </head>
 
@@ -316,16 +465,97 @@
                     </p>
 
                     <!-- Office Locations -->
-                    <p class="mb-0">
-                        Code 4 Hood's primary offices are located
-                        in South Oak Park within the HUD Sacramento
-                        Promise Zone at 4625 44th Street,
-                        Suites 9 and 15, Sacramento, CA 95820.
-                        Our South Sacramento location,
-                        the Code 4 Hood Youth, Family &amp; Community
-                        Collective (YFCC), is located at
-                        7851 35th Avenue, Sacramento, CA 95824.
-                    </p>
+                    
+<!-- =========================
+     OFFICE LOCATIONS
+========================== -->
+
+<div class="office-locations mt-4">
+
+    <h4 class="mb-3 text-white">
+        Our Locations
+    </h4>
+
+    <p class="mb-4 text-white">
+        Code 4 Hood's primary offices are in
+        South Oak Park within the HUD Sacramento
+        Promise Zone.
+    </p>
+
+    <!-- BUSINESS OFFICE -->
+    <div class="office-location-card mb-3">
+
+        <div class="d-flex align-items-start gap-3">
+
+            <i class="bi bi-geo-alt-fill location-icon"></i>
+
+            <div>
+                <h5 class="location-title">
+                    Code 4 Hood Edu Business Office
+                </h5>
+
+                <p class="location-address mb-0">
+                    4625 44th Street, Suite 15<br>
+                    Sacramento, CA 95820
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- STEAM STUDIO & MAKER SPACE -->
+    <div class="office-location-card mb-3">
+
+        <div class="d-flex align-items-start gap-3">
+
+            <i class="bi bi-geo-alt-fill location-icon"></i>
+
+            <div>
+                <h5 class="location-title">
+                    Code 4 Hood Edu STEAM Studio
+                    &amp; Maker Space
+                </h5>
+
+                <p class="location-address mb-0">
+                    4625 44th Street, Suite 9<br>
+                    Sacramento, CA 95820
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- YOUTH FAMILY COMMUNITY COLLECTIVE -->
+    <div class="office-location-card">
+
+        <div class="d-flex align-items-start gap-3">
+
+            <i class="bi bi-geo-alt-fill location-icon"></i>
+
+            <div>
+                <h5 class="location-title">
+                    Code 4 Hood Edu Youth, Family
+                    &amp; Community Collective
+                </h5>
+
+                <p class="location-address mb-1">
+                    7851 35th Avenue<br>
+                    Sacramento, CA 95824
+                </p>
+
+                <p class="location-note mb-0">
+                    Inside the Elmo Allen Slider Clubhouse
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 
                 </div>
             </div>
